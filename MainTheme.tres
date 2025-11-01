@@ -1,0 +1,71 @@
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://bnswwcwcdwyju"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8s18r"]
+bg_color = Color(0.08235294, 0.08235294, 0.08235294, 0)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.8661112, 0.86611134, 0.86611134, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4as0w"]
+bg_color = Color(0.083392, 0.083392, 0.08339202, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.8661112, 0.86611134, 0.86611134, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xgnhp"]
+bg_color = Color(0.083392, 0.083392, 0.08339202, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.4326237, 0.43262374, 0.4326237, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yhag5"]
+bg_color = Color(0.29219002, 0.29219005, 0.29219, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.4326237, 0.43262374, 0.4326237, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="ImageTexture" id="ImageTexture_2a35q"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_1mnke"]
+
+[resource]
+Button/styles/focus = SubResource("StyleBoxFlat_8s18r")
+Button/styles/hover = SubResource("StyleBoxFlat_4as0w")
+Button/styles/normal = SubResource("StyleBoxFlat_xgnhp")
+Button/styles/pressed = SubResource("StyleBoxFlat_yhag5")
+GridContainer/constants/h_separation = 10
+GridContainer/constants/v_separation = 10
+HBoxContainer/constants/separation = 50
+LineEdit/constants/minimum_character_width = 1
+LineEdit/font_sizes/font_size = 56
+LineEdit/icons/clear = SubResource("ImageTexture_2a35q")
+LineEdit/styles/normal = SubResource("StyleBoxFlat_xgnhp")
+MenuButton/font_sizes/font_size = 56
+OptionButton/font_sizes/font_size = 56
+OptionButton/icons/arrow = SubResource("ImageTexture_1mnke")
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_xgnhp")
+VBoxContainer/constants/separation = 10
