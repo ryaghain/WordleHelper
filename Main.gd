@@ -25,6 +25,35 @@ const WORD_LIST = preload("res://Assets/WordList.json")
 const LETTER_POSITIONS: Array[int] = [1, 2, 3, 4, 5]
 const WORD_POSITIONS: Array[int] = [1, 2, 3, 4, 5, 6]
 
+const LETTER_FREQUENCY: Dictionary[String, int] = {
+	"e": 26,
+	"t": 25,
+	"a": 24,
+	"o": 23,
+	"i": 22,
+	"n": 21,
+	"s": 20,
+	"h": 19,
+	"r": 18,
+	"d": 17,
+	"l": 16,
+	"c": 15,
+	"u": 14,
+	"m": 13,
+	"w": 12,
+	"f": 11,
+	"g": 10,
+	"y": 9,
+	"p": 8,
+	"b": 7,
+	"v": 6,
+	"k": 5,
+	"j": 4,
+	"x": 3,
+	"q": 2,
+	"z": 1,
+}
+
 @export var label_word_count: Label
 @export var label_word_list: Label
 @export_group("LineEdits")
@@ -165,6 +194,41 @@ var current_letter_colors: Dictionary[int, Dictionary] = {
 	}
 }
 
+@onready var line_edit_array: Array[LineEdit] = [
+	line_edit_word_1_letter_1,
+	line_edit_word_1_letter_2,
+	line_edit_word_1_letter_3,
+	line_edit_word_1_letter_4,
+	line_edit_word_1_letter_5,
+	line_edit_word_2_letter_1,
+	line_edit_word_2_letter_2,
+	line_edit_word_2_letter_3,
+	line_edit_word_2_letter_4,
+	line_edit_word_2_letter_5,
+	line_edit_word_3_letter_1,
+	line_edit_word_3_letter_2,
+	line_edit_word_3_letter_3,
+	line_edit_word_3_letter_4,
+	line_edit_word_3_letter_5,
+	line_edit_word_4_letter_1,
+	line_edit_word_4_letter_2,
+	line_edit_word_4_letter_3,
+	line_edit_word_4_letter_4,
+	line_edit_word_4_letter_5,
+	line_edit_word_5_letter_1,
+	line_edit_word_5_letter_2,
+	line_edit_word_5_letter_3,
+	line_edit_word_5_letter_4,
+	line_edit_word_5_letter_5,
+	line_edit_word_6_letter_1,
+	line_edit_word_6_letter_2,
+	line_edit_word_6_letter_3,
+	line_edit_word_6_letter_4,
+	line_edit_word_6_letter_5
+]
+
+var current_line_edit_index: int = 0
+
 var current_word_list: String = ""
 
 func _ready() -> void:
@@ -189,6 +253,15 @@ func _ready() -> void:
 		current_word_list += word + "\n"
 		word_count += 1
 	update_displayed_word_list(word_count)
+
+func _unhandled_key_input(event: InputEvent) -> void:
+	if event is InputEventKey and event.pressed:
+		if event.keycode == KEY_BACKSPACE:
+			current_line_edit_index = maxi(0, current_line_edit_index - 1)
+			line_edit_array[current_line_edit_index].text = ""
+		else:
+			line_edit_array[current_line_edit_index].text = OS.get_keycode_string(event.keycode)
+			current_line_edit_index = mini(current_line_edit_index + 1, 29)
 
 func _on_button_reset_pressed() -> void:
 	current_state = STATE.PAINTING_BLACK
@@ -298,6 +371,8 @@ func paint_letter_color(letter_column: int, word_row: int, line_edit: LineEdit, 
 	if do_update:
 		update_word_list()
 
+func sort_descending(a: int, b: int) -> bool: return a > b
+
 func update_word_list() -> void:
 	var word_count: int = 0
 
@@ -338,6 +413,8 @@ func update_word_list() -> void:
 
 	current_word_list = ""
 
+	var ranked_word_strings: Dictionary[int, String] = {}
+
 	for word: String in WORD_LIST.data:
 		var is_word_valid: bool = true
 
@@ -365,8 +442,25 @@ func update_word_list() -> void:
 						break
 
 		if is_word_valid:
-			current_word_list += word + "\n"
+			var word_score: int = 0
+			var word_score_tracker: Array[String] = []
+
+			for letter: String in word:
+				if not word_score_tracker.has(letter):
+					word_score_tracker.append(letter)
+					word_score += LETTER_FREQUENCY[letter]
+
+			if ranked_word_strings.has(word_score):
+				ranked_word_strings[word_score] += word + "\n"
+			else:
+				ranked_word_strings[word_score] = word + "\n"
+
 			word_count += 1
+
+	var ranked_word_scores: Array[int] = ranked_word_strings.keys()
+	ranked_word_scores.sort_custom(sort_descending)
+	for key: int in ranked_word_scores:
+		current_word_list += ranked_word_strings[key]
 
 	update_displayed_word_list(word_count)
 

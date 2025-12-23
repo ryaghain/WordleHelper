@@ -20,42 +20,42 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_3dxm6")
 script = ExtResource("2_lgr22")
-label_word_count = NodePath("MarginContainer/HBoxContainer/HBoxContainer/VBoxContainerWordList/VBoxContainerResults/LabelCount")
-label_word_list = NodePath("MarginContainer/HBoxContainer/HBoxContainer/VBoxContainerWordList/PanelContainer/MarginContainer/ScrollContainer/Label")
-line_edit_word_1_letter_1 = NodePath("MarginContainer/HBoxContainer/GridContainer/LineEditWord1Letter1")
-line_edit_word_1_letter_2 = NodePath("MarginContainer/HBoxContainer/GridContainer/LineEditWord1Letter2")
-line_edit_word_1_letter_3 = NodePath("MarginContainer/HBoxContainer/GridContainer/LineEditWord1Letter3")
-line_edit_word_1_letter_4 = NodePath("MarginContainer/HBoxContainer/GridContainer/LineEditWord1Letter4")
-line_edit_word_1_letter_5 = NodePath("MarginContainer/HBoxContainer/GridContainer/LineEditWord1Letter5")
-line_edit_word_2_letter_1 = NodePath("MarginContainer/HBoxContainer/GridContainer/LineEditWord2Letter1")
-line_edit_word_2_letter_2 = NodePath("MarginContainer/HBoxContainer/GridContainer/LineEditWord2Letter2")
-line_edit_word_2_letter_3 = NodePath("MarginContainer/HBoxContainer/GridContainer/LineEditWord2Letter3")
-line_edit_word_2_letter_4 = NodePath("MarginContainer/HBoxContainer/GridContainer/LineEditWord2Letter4")
-line_edit_word_2_letter_5 = NodePath("MarginContainer/HBoxContainer/GridContainer/LineEditWord2Letter5")
-line_edit_word_3_letter_1 = NodePath("MarginContainer/HBoxContainer/GridContainer/LineEditWord3Letter1")
-line_edit_word_3_letter_2 = NodePath("MarginContainer/HBoxContainer/GridContainer/LineEditWord3Letter2")
-line_edit_word_3_letter_3 = NodePath("MarginContainer/HBoxContainer/GridContainer/LineEditWord3Letter3")
-line_edit_word_3_letter_4 = NodePath("MarginContainer/HBoxContainer/GridContainer/LineEditWord3Letter4")
-line_edit_word_3_letter_5 = NodePath("MarginContainer/HBoxContainer/GridContainer/LineEditWord3Letter5")
-line_edit_word_4_letter_1 = NodePath("MarginContainer/HBoxContainer/GridContainer/LineEditWord4Letter1")
-line_edit_word_4_letter_2 = NodePath("MarginContainer/HBoxContainer/GridContainer/LineEditWord4Letter2")
-line_edit_word_4_letter_3 = NodePath("MarginContainer/HBoxContainer/GridContainer/LineEditWord4Letter3")
-line_edit_word_4_letter_4 = NodePath("MarginContainer/HBoxContainer/GridContainer/LineEditWord4Letter4")
-line_edit_word_4_letter_5 = NodePath("MarginContainer/HBoxContainer/GridContainer/LineEditWord4Letter5")
-line_edit_word_5_letter_1 = NodePath("MarginContainer/HBoxContainer/GridContainer/LineEditWord5Letter1")
-line_edit_word_5_letter_2 = NodePath("MarginContainer/HBoxContainer/GridContainer/LineEditWord5Letter2")
-line_edit_word_5_letter_3 = NodePath("MarginContainer/HBoxContainer/GridContainer/LineEditWord5Letter3")
-line_edit_word_5_letter_4 = NodePath("MarginContainer/HBoxContainer/GridContainer/LineEditWord5Letter4")
-line_edit_word_5_letter_5 = NodePath("MarginContainer/HBoxContainer/GridContainer/LineEditWord5Letter5")
-line_edit_word_6_letter_1 = NodePath("MarginContainer/HBoxContainer/GridContainer/LineEditWord6Letter1")
-line_edit_word_6_letter_2 = NodePath("MarginContainer/HBoxContainer/GridContainer/LineEditWord6Letter2")
-line_edit_word_6_letter_3 = NodePath("MarginContainer/HBoxContainer/GridContainer/LineEditWord6Letter3")
-line_edit_word_6_letter_4 = NodePath("MarginContainer/HBoxContainer/GridContainer/LineEditWord6Letter4")
-line_edit_word_6_letter_5 = NodePath("MarginContainer/HBoxContainer/GridContainer/LineEditWord6Letter5")
-texture_button_black = NodePath("MarginContainer/HBoxContainer/HBoxContainer/VBoxContainerPainting/TextureButtonBlack")
-texture_button_grey = NodePath("MarginContainer/HBoxContainer/HBoxContainer/VBoxContainerPainting/TextureButtonGrey")
-texture_button_yellow = NodePath("MarginContainer/HBoxContainer/HBoxContainer/VBoxContainerPainting/TextureButtonYellow")
-texture_button_green = NodePath("MarginContainer/HBoxContainer/HBoxContainer/VBoxContainerPainting/TextureButtonGreen")
+label_word_count = NodePath("MarginContainer/VBoxContainer/HBoxContainerTop/VBoxContainerWordList/VBoxContainerResults/LabelCount")
+label_word_list = NodePath("MarginContainer/VBoxContainer/HBoxContainerTop/VBoxContainerWordList/PanelContainer/MarginContainer/ScrollContainer/Label")
+line_edit_word_1_letter_1 = NodePath("MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord1Letter1")
+line_edit_word_1_letter_2 = NodePath("MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord1Letter2")
+line_edit_word_1_letter_3 = NodePath("MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord1Letter3")
+line_edit_word_1_letter_4 = NodePath("MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord1Letter4")
+line_edit_word_1_letter_5 = NodePath("MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord1Letter5")
+line_edit_word_2_letter_1 = NodePath("MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord2Letter1")
+line_edit_word_2_letter_2 = NodePath("MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord2Letter2")
+line_edit_word_2_letter_3 = NodePath("MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord2Letter3")
+line_edit_word_2_letter_4 = NodePath("MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord2Letter4")
+line_edit_word_2_letter_5 = NodePath("MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord2Letter5")
+line_edit_word_3_letter_1 = NodePath("MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord3Letter1")
+line_edit_word_3_letter_2 = NodePath("MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord3Letter2")
+line_edit_word_3_letter_3 = NodePath("MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord3Letter3")
+line_edit_word_3_letter_4 = NodePath("MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord3Letter4")
+line_edit_word_3_letter_5 = NodePath("MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord3Letter5")
+line_edit_word_4_letter_1 = NodePath("MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord4Letter1")
+line_edit_word_4_letter_2 = NodePath("MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord4Letter2")
+line_edit_word_4_letter_3 = NodePath("MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord4Letter3")
+line_edit_word_4_letter_4 = NodePath("MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord4Letter4")
+line_edit_word_4_letter_5 = NodePath("MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord4Letter5")
+line_edit_word_5_letter_1 = NodePath("MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord5Letter1")
+line_edit_word_5_letter_2 = NodePath("MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord5Letter2")
+line_edit_word_5_letter_3 = NodePath("MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord5Letter3")
+line_edit_word_5_letter_4 = NodePath("MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord5Letter4")
+line_edit_word_5_letter_5 = NodePath("MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord5Letter5")
+line_edit_word_6_letter_1 = NodePath("MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord6Letter1")
+line_edit_word_6_letter_2 = NodePath("MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord6Letter2")
+line_edit_word_6_letter_3 = NodePath("MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord6Letter3")
+line_edit_word_6_letter_4 = NodePath("MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord6Letter4")
+line_edit_word_6_letter_5 = NodePath("MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord6Letter5")
+texture_button_black = NodePath("MarginContainer/VBoxContainer/VBoxContainerPainting/HBoxContainer/TextureButtonBlack")
+texture_button_grey = NodePath("MarginContainer/VBoxContainer/VBoxContainerPainting/HBoxContainer/TextureButtonGrey")
+texture_button_yellow = NodePath("MarginContainer/VBoxContainer/VBoxContainerPainting/HBoxContainer/TextureButtonYellow")
+texture_button_green = NodePath("MarginContainer/VBoxContainer/VBoxContainerPainting/HBoxContainer/TextureButtonGreen")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -64,22 +64,23 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 35
-theme_override_constants/margin_top = 35
-theme_override_constants/margin_right = 35
-theme_override_constants/margin_bottom = 35
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
 alignment = 1
 
-[node name="GridContainer" type="GridContainer" parent="MarginContainer/HBoxContainer"]
+[node name="HBoxContainerTop" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/VBoxContainer/HBoxContainerTop"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 columns = 5
 
-[node name="LineEditWord1Letter1" type="LineEdit" parent="MarginContainer/HBoxContainer/GridContainer"]
+[node name="LineEditWord1Letter1" type="LineEdit" parent="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -89,7 +90,7 @@ alignment = 1
 max_length = 1
 caret_blink = true
 
-[node name="LineEditWord1Letter2" type="LineEdit" parent="MarginContainer/HBoxContainer/GridContainer"]
+[node name="LineEditWord1Letter2" type="LineEdit" parent="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -98,7 +99,7 @@ alignment = 1
 max_length = 1
 caret_blink = true
 
-[node name="LineEditWord1Letter3" type="LineEdit" parent="MarginContainer/HBoxContainer/GridContainer"]
+[node name="LineEditWord1Letter3" type="LineEdit" parent="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -107,7 +108,7 @@ alignment = 1
 max_length = 1
 caret_blink = true
 
-[node name="LineEditWord1Letter4" type="LineEdit" parent="MarginContainer/HBoxContainer/GridContainer"]
+[node name="LineEditWord1Letter4" type="LineEdit" parent="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -116,7 +117,7 @@ alignment = 1
 max_length = 1
 caret_blink = true
 
-[node name="LineEditWord1Letter5" type="LineEdit" parent="MarginContainer/HBoxContainer/GridContainer"]
+[node name="LineEditWord1Letter5" type="LineEdit" parent="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -125,7 +126,7 @@ alignment = 1
 max_length = 1
 caret_blink = true
 
-[node name="LineEditWord2Letter1" type="LineEdit" parent="MarginContainer/HBoxContainer/GridContainer"]
+[node name="LineEditWord2Letter1" type="LineEdit" parent="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -134,7 +135,7 @@ alignment = 1
 max_length = 1
 caret_blink = true
 
-[node name="LineEditWord2Letter2" type="LineEdit" parent="MarginContainer/HBoxContainer/GridContainer"]
+[node name="LineEditWord2Letter2" type="LineEdit" parent="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -143,7 +144,7 @@ alignment = 1
 max_length = 1
 caret_blink = true
 
-[node name="LineEditWord2Letter3" type="LineEdit" parent="MarginContainer/HBoxContainer/GridContainer"]
+[node name="LineEditWord2Letter3" type="LineEdit" parent="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -152,7 +153,7 @@ alignment = 1
 max_length = 1
 caret_blink = true
 
-[node name="LineEditWord2Letter4" type="LineEdit" parent="MarginContainer/HBoxContainer/GridContainer"]
+[node name="LineEditWord2Letter4" type="LineEdit" parent="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -161,7 +162,7 @@ alignment = 1
 max_length = 1
 caret_blink = true
 
-[node name="LineEditWord2Letter5" type="LineEdit" parent="MarginContainer/HBoxContainer/GridContainer"]
+[node name="LineEditWord2Letter5" type="LineEdit" parent="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -170,7 +171,7 @@ alignment = 1
 max_length = 1
 caret_blink = true
 
-[node name="LineEditWord3Letter1" type="LineEdit" parent="MarginContainer/HBoxContainer/GridContainer"]
+[node name="LineEditWord3Letter1" type="LineEdit" parent="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -179,7 +180,7 @@ alignment = 1
 max_length = 1
 caret_blink = true
 
-[node name="LineEditWord3Letter2" type="LineEdit" parent="MarginContainer/HBoxContainer/GridContainer"]
+[node name="LineEditWord3Letter2" type="LineEdit" parent="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -188,7 +189,7 @@ alignment = 1
 max_length = 1
 caret_blink = true
 
-[node name="LineEditWord3Letter3" type="LineEdit" parent="MarginContainer/HBoxContainer/GridContainer"]
+[node name="LineEditWord3Letter3" type="LineEdit" parent="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -197,7 +198,7 @@ alignment = 1
 max_length = 1
 caret_blink = true
 
-[node name="LineEditWord3Letter4" type="LineEdit" parent="MarginContainer/HBoxContainer/GridContainer"]
+[node name="LineEditWord3Letter4" type="LineEdit" parent="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -206,7 +207,7 @@ alignment = 1
 max_length = 1
 caret_blink = true
 
-[node name="LineEditWord3Letter5" type="LineEdit" parent="MarginContainer/HBoxContainer/GridContainer"]
+[node name="LineEditWord3Letter5" type="LineEdit" parent="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -215,7 +216,7 @@ alignment = 1
 max_length = 1
 caret_blink = true
 
-[node name="LineEditWord4Letter1" type="LineEdit" parent="MarginContainer/HBoxContainer/GridContainer"]
+[node name="LineEditWord4Letter1" type="LineEdit" parent="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -224,7 +225,7 @@ alignment = 1
 max_length = 1
 caret_blink = true
 
-[node name="LineEditWord4Letter2" type="LineEdit" parent="MarginContainer/HBoxContainer/GridContainer"]
+[node name="LineEditWord4Letter2" type="LineEdit" parent="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -233,7 +234,7 @@ alignment = 1
 max_length = 1
 caret_blink = true
 
-[node name="LineEditWord4Letter3" type="LineEdit" parent="MarginContainer/HBoxContainer/GridContainer"]
+[node name="LineEditWord4Letter3" type="LineEdit" parent="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -242,7 +243,7 @@ alignment = 1
 max_length = 1
 caret_blink = true
 
-[node name="LineEditWord4Letter4" type="LineEdit" parent="MarginContainer/HBoxContainer/GridContainer"]
+[node name="LineEditWord4Letter4" type="LineEdit" parent="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -251,7 +252,7 @@ alignment = 1
 max_length = 1
 caret_blink = true
 
-[node name="LineEditWord4Letter5" type="LineEdit" parent="MarginContainer/HBoxContainer/GridContainer"]
+[node name="LineEditWord4Letter5" type="LineEdit" parent="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -260,7 +261,7 @@ alignment = 1
 max_length = 1
 caret_blink = true
 
-[node name="LineEditWord5Letter1" type="LineEdit" parent="MarginContainer/HBoxContainer/GridContainer"]
+[node name="LineEditWord5Letter1" type="LineEdit" parent="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -269,7 +270,7 @@ alignment = 1
 max_length = 1
 caret_blink = true
 
-[node name="LineEditWord5Letter2" type="LineEdit" parent="MarginContainer/HBoxContainer/GridContainer"]
+[node name="LineEditWord5Letter2" type="LineEdit" parent="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -278,7 +279,7 @@ alignment = 1
 max_length = 1
 caret_blink = true
 
-[node name="LineEditWord5Letter3" type="LineEdit" parent="MarginContainer/HBoxContainer/GridContainer"]
+[node name="LineEditWord5Letter3" type="LineEdit" parent="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -287,7 +288,7 @@ alignment = 1
 max_length = 1
 caret_blink = true
 
-[node name="LineEditWord5Letter4" type="LineEdit" parent="MarginContainer/HBoxContainer/GridContainer"]
+[node name="LineEditWord5Letter4" type="LineEdit" parent="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -296,7 +297,7 @@ alignment = 1
 max_length = 1
 caret_blink = true
 
-[node name="LineEditWord5Letter5" type="LineEdit" parent="MarginContainer/HBoxContainer/GridContainer"]
+[node name="LineEditWord5Letter5" type="LineEdit" parent="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -305,7 +306,7 @@ alignment = 1
 max_length = 1
 caret_blink = true
 
-[node name="LineEditWord6Letter1" type="LineEdit" parent="MarginContainer/HBoxContainer/GridContainer"]
+[node name="LineEditWord6Letter1" type="LineEdit" parent="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -314,7 +315,7 @@ alignment = 1
 max_length = 1
 caret_blink = true
 
-[node name="LineEditWord6Letter2" type="LineEdit" parent="MarginContainer/HBoxContainer/GridContainer"]
+[node name="LineEditWord6Letter2" type="LineEdit" parent="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -323,7 +324,7 @@ alignment = 1
 max_length = 1
 caret_blink = true
 
-[node name="LineEditWord6Letter3" type="LineEdit" parent="MarginContainer/HBoxContainer/GridContainer"]
+[node name="LineEditWord6Letter3" type="LineEdit" parent="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -332,7 +333,7 @@ alignment = 1
 max_length = 1
 caret_blink = true
 
-[node name="LineEditWord6Letter4" type="LineEdit" parent="MarginContainer/HBoxContainer/GridContainer"]
+[node name="LineEditWord6Letter4" type="LineEdit" parent="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -341,7 +342,7 @@ alignment = 1
 max_length = 1
 caret_blink = true
 
-[node name="LineEditWord6Letter5" type="LineEdit" parent="MarginContainer/HBoxContainer/GridContainer"]
+[node name="LineEditWord6Letter5" type="LineEdit" parent="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -350,24 +351,69 @@ alignment = 1
 max_length = 1
 caret_blink = true
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HBoxContainer"]
+[node name="VBoxContainerWordList" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainerTop"]
+layout_mode = 2
+
+[node name="VBoxContainerResults" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainerTop/VBoxContainerWordList"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainerTop/VBoxContainerWordList/VBoxContainerResults"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "Results"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="LabelCount" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainerTop/VBoxContainerWordList/VBoxContainerResults"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer/HBoxContainerTop/VBoxContainerWordList"]
+custom_minimum_size = Vector2(0, 570)
+layout_mode = 2
+size_flags_vertical = 6
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/HBoxContainerTop/VBoxContainerWordList/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/VBoxContainer/HBoxContainerTop/VBoxContainerWordList/PanelContainer/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainerTop/VBoxContainerWordList/PanelContainer/MarginContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 24
+uppercase = true
+
+[node name="VBoxContainerPainting" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 alignment = 1
 
-[node name="VBoxContainerPainting" type="VBoxContainer" parent="MarginContainer/HBoxContainer/HBoxContainer"]
-layout_mode = 2
-theme_override_constants/separation = 50
-alignment = 1
-
-[node name="LabelTitle" type="Label" parent="MarginContainer/HBoxContainer/HBoxContainer/VBoxContainerPainting"]
+[node name="LabelTitle" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainerPainting"]
 layout_mode = 2
 size_flags_vertical = 0
-text = "Select a Color
-to Paint Letter"
+text = "Select a Color to Paint Letter"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TextureButtonBlack" type="TextureButton" parent="MarginContainer/HBoxContainer/HBoxContainer/VBoxContainerPainting"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/VBoxContainerPainting"]
+layout_mode = 2
+alignment = 1
+
+[node name="TextureButtonBlack" type="TextureButton" parent="MarginContainer/VBoxContainer/VBoxContainerPainting/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -375,7 +421,7 @@ toggle_mode = true
 texture_normal = ExtResource("4_20pc6")
 texture_pressed = ExtResource("5_5vvyt")
 
-[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/HBoxContainer/VBoxContainerPainting/TextureButtonBlack"]
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainerPainting/HBoxContainer/TextureButtonBlack"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -393,7 +439,7 @@ text = "Clear"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="TextureButtonGrey" type="TextureButton" parent="MarginContainer/HBoxContainer/HBoxContainer/VBoxContainerPainting"]
+[node name="TextureButtonGrey" type="TextureButton" parent="MarginContainer/VBoxContainer/VBoxContainerPainting/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -401,7 +447,7 @@ toggle_mode = true
 texture_normal = ExtResource("4_03owx")
 texture_pressed = ExtResource("5_03owx")
 
-[node name="TextureButtonYellow" type="TextureButton" parent="MarginContainer/HBoxContainer/HBoxContainer/VBoxContainerPainting"]
+[node name="TextureButtonYellow" type="TextureButton" parent="MarginContainer/VBoxContainer/VBoxContainerPainting/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -409,7 +455,7 @@ toggle_mode = true
 texture_normal = ExtResource("5_wkp8b")
 texture_pressed = ExtResource("7_wkp8b")
 
-[node name="TextureButtonGreen" type="TextureButton" parent="MarginContainer/HBoxContainer/HBoxContainer/VBoxContainerPainting"]
+[node name="TextureButtonGreen" type="TextureButton" parent="MarginContainer/VBoxContainer/VBoxContainerPainting/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -417,133 +463,87 @@ toggle_mode = true
 texture_normal = ExtResource("6_20pc6")
 texture_pressed = ExtResource("9_20pc6")
 
-[node name="VBoxContainerWordList" type="VBoxContainer" parent="MarginContainer/HBoxContainer/HBoxContainer"]
+[node name="HBoxContainerControls" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-
-[node name="VBoxContainerResults" type="VBoxContainer" parent="MarginContainer/HBoxContainer/HBoxContainer/VBoxContainerWordList"]
-layout_mode = 2
-theme_override_constants/separation = 0
-
-[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/HBoxContainer/VBoxContainerWordList/VBoxContainerResults"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 28
-text = "Results"
-horizontal_alignment = 1
-vertical_alignment = 1
-uppercase = true
-
-[node name="LabelCount" type="Label" parent="MarginContainer/HBoxContainer/HBoxContainer/VBoxContainerWordList/VBoxContainerResults"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 22
-text = "0"
-horizontal_alignment = 1
-vertical_alignment = 1
-uppercase = true
-
-[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/HBoxContainer/HBoxContainer/VBoxContainerWordList"]
-custom_minimum_size = Vector2(0, 570)
-layout_mode = 2
-size_flags_vertical = 6
-
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/HBoxContainer/VBoxContainerWordList/PanelContainer"]
-layout_mode = 2
-theme_override_constants/margin_left = 10
-theme_override_constants/margin_top = 10
-theme_override_constants/margin_right = 10
-theme_override_constants/margin_bottom = 10
-
-[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/HBoxContainer/HBoxContainer/VBoxContainerWordList/PanelContainer/MarginContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-horizontal_scroll_mode = 0
-
-[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/HBoxContainer/VBoxContainerWordList/PanelContainer/MarginContainer/ScrollContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_override_font_sizes/font_size = 24
-uppercase = true
-
-[node name="VBoxContainerControls" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
-custom_minimum_size = Vector2(100, 650)
-layout_mode = 2
+size_flags_horizontal = 4
 size_flags_vertical = 4
+alignment = 1
 
-[node name="ButtonReset" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainerControls"]
+[node name="ButtonReset" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainerControls"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 32
 text = "Reset"
 
-[node name="ButtonQuit" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainerControls"]
+[node name="ButtonQuit" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainerControls"]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_font_sizes/font_size = 32
 text = "Quit"
 
-[connection signal="gui_input" from="MarginContainer/HBoxContainer/GridContainer/LineEditWord1Letter1" to="." method="_on_line_edit_gui_input" binds= [1, 1]]
-[connection signal="text_changed" from="MarginContainer/HBoxContainer/GridContainer/LineEditWord1Letter1" to="." method="_on_line_edit_text_changed" flags=18]
-[connection signal="gui_input" from="MarginContainer/HBoxContainer/GridContainer/LineEditWord1Letter2" to="." method="_on_line_edit_gui_input" binds= [1, 2]]
-[connection signal="text_changed" from="MarginContainer/HBoxContainer/GridContainer/LineEditWord1Letter2" to="." method="_on_line_edit_text_changed" flags=18]
-[connection signal="gui_input" from="MarginContainer/HBoxContainer/GridContainer/LineEditWord1Letter3" to="." method="_on_line_edit_gui_input" binds= [1, 3]]
-[connection signal="text_changed" from="MarginContainer/HBoxContainer/GridContainer/LineEditWord1Letter3" to="." method="_on_line_edit_text_changed" flags=18]
-[connection signal="gui_input" from="MarginContainer/HBoxContainer/GridContainer/LineEditWord1Letter4" to="." method="_on_line_edit_gui_input" binds= [1, 4]]
-[connection signal="text_changed" from="MarginContainer/HBoxContainer/GridContainer/LineEditWord1Letter4" to="." method="_on_line_edit_text_changed" flags=18]
-[connection signal="gui_input" from="MarginContainer/HBoxContainer/GridContainer/LineEditWord1Letter5" to="." method="_on_line_edit_gui_input" binds= [1, 5]]
-[connection signal="text_changed" from="MarginContainer/HBoxContainer/GridContainer/LineEditWord1Letter5" to="." method="_on_line_edit_text_changed" flags=18]
-[connection signal="gui_input" from="MarginContainer/HBoxContainer/GridContainer/LineEditWord2Letter1" to="." method="_on_line_edit_gui_input" binds= [2, 1]]
-[connection signal="text_changed" from="MarginContainer/HBoxContainer/GridContainer/LineEditWord2Letter1" to="." method="_on_line_edit_text_changed" flags=18]
-[connection signal="gui_input" from="MarginContainer/HBoxContainer/GridContainer/LineEditWord2Letter2" to="." method="_on_line_edit_gui_input" binds= [2, 2]]
-[connection signal="text_changed" from="MarginContainer/HBoxContainer/GridContainer/LineEditWord2Letter2" to="." method="_on_line_edit_text_changed" flags=18]
-[connection signal="gui_input" from="MarginContainer/HBoxContainer/GridContainer/LineEditWord2Letter3" to="." method="_on_line_edit_gui_input" binds= [2, 3]]
-[connection signal="text_changed" from="MarginContainer/HBoxContainer/GridContainer/LineEditWord2Letter3" to="." method="_on_line_edit_text_changed" flags=18]
-[connection signal="gui_input" from="MarginContainer/HBoxContainer/GridContainer/LineEditWord2Letter4" to="." method="_on_line_edit_gui_input" binds= [2, 4]]
-[connection signal="text_changed" from="MarginContainer/HBoxContainer/GridContainer/LineEditWord2Letter4" to="." method="_on_line_edit_text_changed" flags=18]
-[connection signal="gui_input" from="MarginContainer/HBoxContainer/GridContainer/LineEditWord2Letter5" to="." method="_on_line_edit_gui_input" binds= [2, 5]]
-[connection signal="text_changed" from="MarginContainer/HBoxContainer/GridContainer/LineEditWord2Letter5" to="." method="_on_line_edit_text_changed" flags=18]
-[connection signal="gui_input" from="MarginContainer/HBoxContainer/GridContainer/LineEditWord3Letter1" to="." method="_on_line_edit_gui_input" binds= [3, 1]]
-[connection signal="text_changed" from="MarginContainer/HBoxContainer/GridContainer/LineEditWord3Letter1" to="." method="_on_line_edit_text_changed" flags=18]
-[connection signal="gui_input" from="MarginContainer/HBoxContainer/GridContainer/LineEditWord3Letter2" to="." method="_on_line_edit_gui_input" binds= [3, 2]]
-[connection signal="text_changed" from="MarginContainer/HBoxContainer/GridContainer/LineEditWord3Letter2" to="." method="_on_line_edit_text_changed" flags=18]
-[connection signal="gui_input" from="MarginContainer/HBoxContainer/GridContainer/LineEditWord3Letter3" to="." method="_on_line_edit_gui_input" binds= [3, 3]]
-[connection signal="text_changed" from="MarginContainer/HBoxContainer/GridContainer/LineEditWord3Letter3" to="." method="_on_line_edit_text_changed" flags=18]
-[connection signal="gui_input" from="MarginContainer/HBoxContainer/GridContainer/LineEditWord3Letter4" to="." method="_on_line_edit_gui_input" binds= [3, 4]]
-[connection signal="text_changed" from="MarginContainer/HBoxContainer/GridContainer/LineEditWord3Letter4" to="." method="_on_line_edit_text_changed" flags=18]
-[connection signal="gui_input" from="MarginContainer/HBoxContainer/GridContainer/LineEditWord3Letter5" to="." method="_on_line_edit_gui_input" binds= [3, 5]]
-[connection signal="text_changed" from="MarginContainer/HBoxContainer/GridContainer/LineEditWord3Letter5" to="." method="_on_line_edit_text_changed" flags=18]
-[connection signal="gui_input" from="MarginContainer/HBoxContainer/GridContainer/LineEditWord4Letter1" to="." method="_on_line_edit_gui_input" binds= [4, 1]]
-[connection signal="text_changed" from="MarginContainer/HBoxContainer/GridContainer/LineEditWord4Letter1" to="." method="_on_line_edit_text_changed" flags=18]
-[connection signal="gui_input" from="MarginContainer/HBoxContainer/GridContainer/LineEditWord4Letter2" to="." method="_on_line_edit_gui_input" binds= [4, 2]]
-[connection signal="text_changed" from="MarginContainer/HBoxContainer/GridContainer/LineEditWord4Letter2" to="." method="_on_line_edit_text_changed" flags=18]
-[connection signal="gui_input" from="MarginContainer/HBoxContainer/GridContainer/LineEditWord4Letter3" to="." method="_on_line_edit_gui_input" binds= [4, 3]]
-[connection signal="text_changed" from="MarginContainer/HBoxContainer/GridContainer/LineEditWord4Letter3" to="." method="_on_line_edit_text_changed" flags=18]
-[connection signal="gui_input" from="MarginContainer/HBoxContainer/GridContainer/LineEditWord4Letter4" to="." method="_on_line_edit_gui_input" binds= [4, 4]]
-[connection signal="text_changed" from="MarginContainer/HBoxContainer/GridContainer/LineEditWord4Letter4" to="." method="_on_line_edit_text_changed" flags=18]
-[connection signal="gui_input" from="MarginContainer/HBoxContainer/GridContainer/LineEditWord4Letter5" to="." method="_on_line_edit_gui_input" binds= [4, 5]]
-[connection signal="text_changed" from="MarginContainer/HBoxContainer/GridContainer/LineEditWord4Letter5" to="." method="_on_line_edit_text_changed" flags=18]
-[connection signal="gui_input" from="MarginContainer/HBoxContainer/GridContainer/LineEditWord5Letter1" to="." method="_on_line_edit_gui_input" binds= [5, 1]]
-[connection signal="text_changed" from="MarginContainer/HBoxContainer/GridContainer/LineEditWord5Letter1" to="." method="_on_line_edit_text_changed" flags=18]
-[connection signal="gui_input" from="MarginContainer/HBoxContainer/GridContainer/LineEditWord5Letter2" to="." method="_on_line_edit_gui_input" binds= [5, 2]]
-[connection signal="text_changed" from="MarginContainer/HBoxContainer/GridContainer/LineEditWord5Letter2" to="." method="_on_line_edit_text_changed" flags=18]
-[connection signal="gui_input" from="MarginContainer/HBoxContainer/GridContainer/LineEditWord5Letter3" to="." method="_on_line_edit_gui_input" binds= [5, 3]]
-[connection signal="text_changed" from="MarginContainer/HBoxContainer/GridContainer/LineEditWord5Letter3" to="." method="_on_line_edit_text_changed" flags=18]
-[connection signal="gui_input" from="MarginContainer/HBoxContainer/GridContainer/LineEditWord5Letter4" to="." method="_on_line_edit_gui_input" binds= [5, 4]]
-[connection signal="text_changed" from="MarginContainer/HBoxContainer/GridContainer/LineEditWord5Letter4" to="." method="_on_line_edit_text_changed" flags=18]
-[connection signal="gui_input" from="MarginContainer/HBoxContainer/GridContainer/LineEditWord5Letter5" to="." method="_on_line_edit_gui_input" binds= [5, 5]]
-[connection signal="text_changed" from="MarginContainer/HBoxContainer/GridContainer/LineEditWord5Letter5" to="." method="_on_line_edit_text_changed" flags=18]
-[connection signal="gui_input" from="MarginContainer/HBoxContainer/GridContainer/LineEditWord6Letter1" to="." method="_on_line_edit_gui_input" binds= [6, 1]]
-[connection signal="text_changed" from="MarginContainer/HBoxContainer/GridContainer/LineEditWord6Letter1" to="." method="_on_line_edit_text_changed" flags=18]
-[connection signal="gui_input" from="MarginContainer/HBoxContainer/GridContainer/LineEditWord6Letter2" to="." method="_on_line_edit_gui_input" binds= [6, 2]]
-[connection signal="text_changed" from="MarginContainer/HBoxContainer/GridContainer/LineEditWord6Letter2" to="." method="_on_line_edit_text_changed" flags=18]
-[connection signal="gui_input" from="MarginContainer/HBoxContainer/GridContainer/LineEditWord6Letter3" to="." method="_on_line_edit_gui_input" binds= [6, 3]]
-[connection signal="text_changed" from="MarginContainer/HBoxContainer/GridContainer/LineEditWord6Letter3" to="." method="_on_line_edit_text_changed" flags=18]
-[connection signal="gui_input" from="MarginContainer/HBoxContainer/GridContainer/LineEditWord6Letter4" to="." method="_on_line_edit_gui_input" binds= [6, 4]]
-[connection signal="text_changed" from="MarginContainer/HBoxContainer/GridContainer/LineEditWord6Letter4" to="." method="_on_line_edit_text_changed" flags=18]
-[connection signal="gui_input" from="MarginContainer/HBoxContainer/GridContainer/LineEditWord6Letter5" to="." method="_on_line_edit_gui_input" binds= [6, 5]]
-[connection signal="text_changed" from="MarginContainer/HBoxContainer/GridContainer/LineEditWord6Letter5" to="." method="_on_line_edit_text_changed" flags=18]
-[connection signal="toggled" from="MarginContainer/HBoxContainer/HBoxContainer/VBoxContainerPainting/TextureButtonBlack" to="." method="_on_texture_button_black_toggled"]
-[connection signal="toggled" from="MarginContainer/HBoxContainer/HBoxContainer/VBoxContainerPainting/TextureButtonGrey" to="." method="_on_texture_button_grey_toggled"]
-[connection signal="toggled" from="MarginContainer/HBoxContainer/HBoxContainer/VBoxContainerPainting/TextureButtonYellow" to="." method="_on_texture_button_yellow_toggled"]
-[connection signal="toggled" from="MarginContainer/HBoxContainer/HBoxContainer/VBoxContainerPainting/TextureButtonGreen" to="." method="_on_texture_button_green_toggled"]
-[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainerControls/ButtonReset" to="." method="_on_button_reset_pressed"]
-[connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainerControls/ButtonQuit" to="." method="_on_button_quit_pressed"]
+[connection signal="gui_input" from="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord1Letter1" to="." method="_on_line_edit_gui_input" binds= [1, 1]]
+[connection signal="text_changed" from="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord1Letter1" to="." method="_on_line_edit_text_changed" flags=18]
+[connection signal="gui_input" from="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord1Letter2" to="." method="_on_line_edit_gui_input" binds= [1, 2]]
+[connection signal="text_changed" from="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord1Letter2" to="." method="_on_line_edit_text_changed" flags=18]
+[connection signal="gui_input" from="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord1Letter3" to="." method="_on_line_edit_gui_input" binds= [1, 3]]
+[connection signal="text_changed" from="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord1Letter3" to="." method="_on_line_edit_text_changed" flags=18]
+[connection signal="gui_input" from="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord1Letter4" to="." method="_on_line_edit_gui_input" binds= [1, 4]]
+[connection signal="text_changed" from="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord1Letter4" to="." method="_on_line_edit_text_changed" flags=18]
+[connection signal="gui_input" from="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord1Letter5" to="." method="_on_line_edit_gui_input" binds= [1, 5]]
+[connection signal="text_changed" from="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord1Letter5" to="." method="_on_line_edit_text_changed" flags=18]
+[connection signal="gui_input" from="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord2Letter1" to="." method="_on_line_edit_gui_input" binds= [2, 1]]
+[connection signal="text_changed" from="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord2Letter1" to="." method="_on_line_edit_text_changed" flags=18]
+[connection signal="gui_input" from="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord2Letter2" to="." method="_on_line_edit_gui_input" binds= [2, 2]]
+[connection signal="text_changed" from="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord2Letter2" to="." method="_on_line_edit_text_changed" flags=18]
+[connection signal="gui_input" from="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord2Letter3" to="." method="_on_line_edit_gui_input" binds= [2, 3]]
+[connection signal="text_changed" from="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord2Letter3" to="." method="_on_line_edit_text_changed" flags=18]
+[connection signal="gui_input" from="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord2Letter4" to="." method="_on_line_edit_gui_input" binds= [2, 4]]
+[connection signal="text_changed" from="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord2Letter4" to="." method="_on_line_edit_text_changed" flags=18]
+[connection signal="gui_input" from="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord2Letter5" to="." method="_on_line_edit_gui_input" binds= [2, 5]]
+[connection signal="text_changed" from="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord2Letter5" to="." method="_on_line_edit_text_changed" flags=18]
+[connection signal="gui_input" from="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord3Letter1" to="." method="_on_line_edit_gui_input" binds= [3, 1]]
+[connection signal="text_changed" from="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord3Letter1" to="." method="_on_line_edit_text_changed" flags=18]
+[connection signal="gui_input" from="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord3Letter2" to="." method="_on_line_edit_gui_input" binds= [3, 2]]
+[connection signal="text_changed" from="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord3Letter2" to="." method="_on_line_edit_text_changed" flags=18]
+[connection signal="gui_input" from="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord3Letter3" to="." method="_on_line_edit_gui_input" binds= [3, 3]]
+[connection signal="text_changed" from="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord3Letter3" to="." method="_on_line_edit_text_changed" flags=18]
+[connection signal="gui_input" from="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord3Letter4" to="." method="_on_line_edit_gui_input" binds= [3, 4]]
+[connection signal="text_changed" from="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord3Letter4" to="." method="_on_line_edit_text_changed" flags=18]
+[connection signal="gui_input" from="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord3Letter5" to="." method="_on_line_edit_gui_input" binds= [3, 5]]
+[connection signal="text_changed" from="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord3Letter5" to="." method="_on_line_edit_text_changed" flags=18]
+[connection signal="gui_input" from="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord4Letter1" to="." method="_on_line_edit_gui_input" binds= [4, 1]]
+[connection signal="text_changed" from="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord4Letter1" to="." method="_on_line_edit_text_changed" flags=18]
+[connection signal="gui_input" from="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord4Letter2" to="." method="_on_line_edit_gui_input" binds= [4, 2]]
+[connection signal="text_changed" from="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord4Letter2" to="." method="_on_line_edit_text_changed" flags=18]
+[connection signal="gui_input" from="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord4Letter3" to="." method="_on_line_edit_gui_input" binds= [4, 3]]
+[connection signal="text_changed" from="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord4Letter3" to="." method="_on_line_edit_text_changed" flags=18]
+[connection signal="gui_input" from="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord4Letter4" to="." method="_on_line_edit_gui_input" binds= [4, 4]]
+[connection signal="text_changed" from="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord4Letter4" to="." method="_on_line_edit_text_changed" flags=18]
+[connection signal="gui_input" from="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord4Letter5" to="." method="_on_line_edit_gui_input" binds= [4, 5]]
+[connection signal="text_changed" from="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord4Letter5" to="." method="_on_line_edit_text_changed" flags=18]
+[connection signal="gui_input" from="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord5Letter1" to="." method="_on_line_edit_gui_input" binds= [5, 1]]
+[connection signal="text_changed" from="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord5Letter1" to="." method="_on_line_edit_text_changed" flags=18]
+[connection signal="gui_input" from="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord5Letter2" to="." method="_on_line_edit_gui_input" binds= [5, 2]]
+[connection signal="text_changed" from="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord5Letter2" to="." method="_on_line_edit_text_changed" flags=18]
+[connection signal="gui_input" from="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord5Letter3" to="." method="_on_line_edit_gui_input" binds= [5, 3]]
+[connection signal="text_changed" from="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord5Letter3" to="." method="_on_line_edit_text_changed" flags=18]
+[connection signal="gui_input" from="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord5Letter4" to="." method="_on_line_edit_gui_input" binds= [5, 4]]
+[connection signal="text_changed" from="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord5Letter4" to="." method="_on_line_edit_text_changed" flags=18]
+[connection signal="gui_input" from="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord5Letter5" to="." method="_on_line_edit_gui_input" binds= [5, 5]]
+[connection signal="text_changed" from="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord5Letter5" to="." method="_on_line_edit_text_changed" flags=18]
+[connection signal="gui_input" from="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord6Letter1" to="." method="_on_line_edit_gui_input" binds= [6, 1]]
+[connection signal="text_changed" from="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord6Letter1" to="." method="_on_line_edit_text_changed" flags=18]
+[connection signal="gui_input" from="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord6Letter2" to="." method="_on_line_edit_gui_input" binds= [6, 2]]
+[connection signal="text_changed" from="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord6Letter2" to="." method="_on_line_edit_text_changed" flags=18]
+[connection signal="gui_input" from="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord6Letter3" to="." method="_on_line_edit_gui_input" binds= [6, 3]]
+[connection signal="text_changed" from="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord6Letter3" to="." method="_on_line_edit_text_changed" flags=18]
+[connection signal="gui_input" from="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord6Letter4" to="." method="_on_line_edit_gui_input" binds= [6, 4]]
+[connection signal="text_changed" from="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord6Letter4" to="." method="_on_line_edit_text_changed" flags=18]
+[connection signal="gui_input" from="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord6Letter5" to="." method="_on_line_edit_gui_input" binds= [6, 5]]
+[connection signal="text_changed" from="MarginContainer/VBoxContainer/HBoxContainerTop/GridContainer/LineEditWord6Letter5" to="." method="_on_line_edit_text_changed" flags=18]
+[connection signal="toggled" from="MarginContainer/VBoxContainer/VBoxContainerPainting/HBoxContainer/TextureButtonBlack" to="." method="_on_texture_button_black_toggled"]
+[connection signal="toggled" from="MarginContainer/VBoxContainer/VBoxContainerPainting/HBoxContainer/TextureButtonGrey" to="." method="_on_texture_button_grey_toggled"]
+[connection signal="toggled" from="MarginContainer/VBoxContainer/VBoxContainerPainting/HBoxContainer/TextureButtonYellow" to="." method="_on_texture_button_yellow_toggled"]
+[connection signal="toggled" from="MarginContainer/VBoxContainer/VBoxContainerPainting/HBoxContainer/TextureButtonGreen" to="." method="_on_texture_button_green_toggled"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainerControls/ButtonReset" to="." method="_on_button_reset_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainerControls/ButtonQuit" to="." method="_on_button_quit_pressed"]

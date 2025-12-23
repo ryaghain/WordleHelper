@@ -13,15 +13,14 @@ config_version=5
 config/name="Wordle Helper"
 run/main_scene="uid://dve7my1rxi5qq"
 config/features=PackedStringArray("4.5", "Forward Plus")
-boot_splash/bg_color=Color(0, 0, 0, 0)
 boot_splash/show_image=false
 boot_splash/fullsize=false
 config/icon="uid://d1b0hgs7ogsvv"
 
 [display]
 
-window/size/viewport_width=1200
-window/size/viewport_height=720
+window/size/viewport_width=720
+window/size/viewport_height=1200
 window/size/always_on_top=true
 window/size/transparent=true
 window/stretch/mode="canvas_items"
