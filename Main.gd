@@ -376,19 +376,19 @@ func sort_descending(a: int, b: int) -> bool: return a > b
 func update_word_list() -> void:
 	var word_count: int = 0
 
-	var letters_is: Dictionary[int, String] = {
-		1: "",
-		2: "",
-		3: "",
-		4: "",
-		5: ""
+	var letters_is: Dictionary[int, Dictionary] = {
+		1: {},
+		2: {},
+		3: {},
+		4: {},
+		5: {}
 	}
-	var letters_is_not: Dictionary[int, Array] = {
-		1: [],
-		2: [],
-		3: [],
-		4: [],
-		5: []
+	var letters_is_not: Dictionary[int, Dictionary] = {
+		1: {},
+		2: {},
+		3: {},
+		4: {},
+		5: {}
 	}
 	var word_contains: Array[String] = []
 	var word_does_not_contain: Array[String] = []
@@ -403,13 +403,11 @@ func update_word_list() -> void:
 						if not word_does_not_contain.has(letter):
 							word_does_not_contain.append(letter)
 					LETTER_COLORS.YELLOW:
-						if not letters_is_not[letter_column].has(letter):
-							letters_is_not[letter_column].append(letter)
+						letters_is_not[letter_column][letter] = word_row
 						if not word_contains.has(letter):
 							word_contains.append(letter)
 					LETTER_COLORS.GREEN:
-						if letters_is[letter_column].is_empty():
-							letters_is[letter_column] = letter
+						letters_is[letter_column][letter] = word_row
 
 	current_word_list = ""
 
@@ -419,19 +417,25 @@ func update_word_list() -> void:
 		var is_word_valid: bool = true
 
 		for letter_position: int in LETTER_POSITIONS:
-			if not letters_is[letter_position].is_empty() and word[letter_position - 1] != letters_is[letter_position]:
+			# If this position has a green letter, skip the word if the current word's letter in that position does not match.
+			if not letters_is[letter_position].is_empty() and word[letter_position - 1] != letters_is[letter_position].keys()[0]:
 				is_word_valid = false
 				break
 
+			# If this position has a yellow letter, skip the word if the current word's letter in that position matches.
 			if not letters_is_not[letter_position].is_empty():
-				for letter: String in letters_is_not[letter_position]:
+				for letter: String in letters_is_not[letter_position].keys():
 					if word[letter_position - 1] == letter:
 						is_word_valid = false
 						break
 
 			if not word_contains.is_empty():
 				for letter: String in word_contains:
-					if not word.contains(letter):
+					var modified_word: String = word
+					# Check if the green letter is in the same row as the yellow letter, and if so removes that letter from that position in the word.
+					if letters_is[letter_position].has(letter) and letters_is[letter_position][letter] == letters_is_not[letter_position][letter]:
+						modified_word.erase(letter_position - 1)
+					if not modified_word.contains(letter):
 						is_word_valid = false
 						break
 

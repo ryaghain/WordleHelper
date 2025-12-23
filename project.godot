@@ -19,13 +19,11 @@ config/icon="uid://d1b0hgs7ogsvv"
 
 [display]
 
-window/size/viewport_width=720
-window/size/viewport_height=1200
+window/size/viewport_width=713
+window/size/viewport_height=945
 window/size/always_on_top=true
-window/size/transparent=true
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
-window/per_pixel_transparency/allowed=true
 
 [gui]
 
