@@ -280,7 +280,7 @@ func _on_button_reset_pressed() -> void:
 func _on_button_quit_pressed() -> void:
 	get_tree().quit()
 
-func _on_button_word_pressed(location: Vector2i) -> void:
+func _on_button_letter_pressed(location: Vector2i) -> void:
 	var button: Button = button_dict[location.x][location.y]
 	if current_state != STATE.DEFAULT:
 		button.release_focus()

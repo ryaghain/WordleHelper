@@ -118,181 +118,181 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 columns = 5
 
-[node name="Button0,0" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer"]
+[node name="ButtonLetter0,0" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 text = " "
 
-[node name="Button0,1" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer"]
+[node name="ButtonLetter0,1" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 text = " "
 
-[node name="Button0,2" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer"]
+[node name="ButtonLetter0,2" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 text = " "
 
-[node name="Button0,3" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer"]
+[node name="ButtonLetter0,3" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 text = " "
 
-[node name="Button0,4" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer"]
+[node name="ButtonLetter0,4" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 text = " "
 
-[node name="Button1,0" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer"]
+[node name="ButtonLetter1,0" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 text = " "
 
-[node name="Button1,1" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer"]
+[node name="ButtonLetter1,1" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 text = " "
 
-[node name="Button1,2" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer"]
+[node name="ButtonLetter1,2" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 text = " "
 
-[node name="Button1,3" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer"]
+[node name="ButtonLetter1,3" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 text = " "
 
-[node name="Button1,4" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer"]
+[node name="ButtonLetter1,4" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 text = " "
 
-[node name="Button2,0" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer"]
+[node name="ButtonLetter2,0" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 text = " "
 
-[node name="Button2,1" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer"]
+[node name="ButtonLetter2,1" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 text = " "
 
-[node name="Button2,2" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer"]
+[node name="ButtonLetter2,2" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 text = " "
 
-[node name="Button2,3" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer"]
+[node name="ButtonLetter2,3" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 text = " "
 
-[node name="Button2,4" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer"]
+[node name="ButtonLetter2,4" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 text = " "
 
-[node name="Button3,0" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer"]
+[node name="ButtonLetter3,0" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 text = " "
 
-[node name="Button3,1" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer"]
+[node name="ButtonLetter3,1" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 text = " "
 
-[node name="Button3,2" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer"]
+[node name="ButtonLetter3,2" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 text = " "
 
-[node name="Button3,3" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer"]
+[node name="ButtonLetter3,3" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 text = " "
 
-[node name="Button3,4" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer"]
+[node name="ButtonLetter3,4" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 text = " "
 
-[node name="Button4,0" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer"]
+[node name="ButtonLetter4,0" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 text = " "
 
-[node name="Button4,1" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer"]
+[node name="ButtonLetter4,1" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 text = " "
 
-[node name="Button4,2" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer"]
+[node name="ButtonLetter4,2" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 text = " "
 
-[node name="Button4,3" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer"]
+[node name="ButtonLetter4,3" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 text = " "
 
-[node name="Button4,4" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer"]
+[node name="ButtonLetter4,4" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 text = " "
 
-[node name="Button5,0" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer"]
+[node name="ButtonLetter5,0" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 text = " "
 
-[node name="Button5,1" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer"]
+[node name="ButtonLetter5,1" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 text = " "
 
-[node name="Button5,2" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer"]
+[node name="ButtonLetter5,2" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 text = " "
 
-[node name="Button5,3" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer"]
+[node name="ButtonLetter5,3" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 text = " "
 
-[node name="Button5,4" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer"]
+[node name="ButtonLetter5,4" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -432,6 +432,36 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_5vvyt")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_c6i3y")
 text = "Quit"
 
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer/ButtonLetter0,0" to="." method="_on_button_letter_pressed" binds= [Vector2i(0, 0)]]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer/ButtonLetter0,1" to="." method="_on_button_letter_pressed" binds= [Vector2i(0, 1)]]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer/ButtonLetter0,2" to="." method="_on_button_letter_pressed" binds= [Vector2i(0, 2)]]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer/ButtonLetter0,3" to="." method="_on_button_letter_pressed" binds= [Vector2i(0, 3)]]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer/ButtonLetter0,4" to="." method="_on_button_letter_pressed" binds= [Vector2i(0, 4)]]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer/ButtonLetter1,0" to="." method="_on_button_letter_pressed" binds= [Vector2i(1, 0)]]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer/ButtonLetter1,1" to="." method="_on_button_letter_pressed" binds= [Vector2i(1, 1)]]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer/ButtonLetter1,2" to="." method="_on_button_letter_pressed" binds= [Vector2i(1, 2)]]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer/ButtonLetter1,3" to="." method="_on_button_letter_pressed" binds= [Vector2i(1, 3)]]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer/ButtonLetter1,4" to="." method="_on_button_letter_pressed" binds= [Vector2i(1, 4)]]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer/ButtonLetter2,0" to="." method="_on_button_letter_pressed" binds= [Vector2i(2, 0)]]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer/ButtonLetter2,1" to="." method="_on_button_letter_pressed" binds= [Vector2i(2, 1)]]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer/ButtonLetter2,2" to="." method="_on_button_letter_pressed" binds= [Vector2i(2, 2)]]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer/ButtonLetter2,3" to="." method="_on_button_letter_pressed" binds= [Vector2i(2, 3)]]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer/ButtonLetter2,4" to="." method="_on_button_letter_pressed" binds= [Vector2i(2, 4)]]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer/ButtonLetter3,0" to="." method="_on_button_letter_pressed" binds= [Vector2i(3, 0)]]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer/ButtonLetter3,1" to="." method="_on_button_letter_pressed" binds= [Vector2i(3, 1)]]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer/ButtonLetter3,2" to="." method="_on_button_letter_pressed" binds= [Vector2i(3, 2)]]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer/ButtonLetter3,3" to="." method="_on_button_letter_pressed" binds= [Vector2i(3, 3)]]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer/ButtonLetter3,4" to="." method="_on_button_letter_pressed" binds= [Vector2i(3, 4)]]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer/ButtonLetter4,0" to="." method="_on_button_letter_pressed" binds= [Vector2i(4, 0)]]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer/ButtonLetter4,1" to="." method="_on_button_letter_pressed" binds= [Vector2i(4, 1)]]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer/ButtonLetter4,2" to="." method="_on_button_letter_pressed" binds= [Vector2i(4, 2)]]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer/ButtonLetter4,3" to="." method="_on_button_letter_pressed" binds= [Vector2i(4, 3)]]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer/ButtonLetter4,4" to="." method="_on_button_letter_pressed" binds= [Vector2i(4, 4)]]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer/ButtonLetter5,0" to="." method="_on_button_letter_pressed" binds= [Vector2i(5, 0)]]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer/ButtonLetter5,1" to="." method="_on_button_letter_pressed" binds= [Vector2i(5, 1)]]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer/ButtonLetter5,2" to="." method="_on_button_letter_pressed" binds= [Vector2i(5, 2)]]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer/ButtonLetter5,3" to="." method="_on_button_letter_pressed" binds= [Vector2i(5, 3)]]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer/ButtonLetter5,4" to="." method="_on_button_letter_pressed" binds= [Vector2i(5, 4)]]
 [connection signal="toggled" from="MarginContainer/VBoxContainer/VBoxContainerPainting/HBoxContainer/TextureButtonBlack" to="." method="_on_texture_button_black_toggled"]
 [connection signal="toggled" from="MarginContainer/VBoxContainer/VBoxContainerPainting/HBoxContainer/TextureButtonGrey" to="." method="_on_texture_button_grey_toggled"]
 [connection signal="toggled" from="MarginContainer/VBoxContainer/VBoxContainerPainting/HBoxContainer/TextureButtonYellow" to="." method="_on_texture_button_yellow_toggled"]
