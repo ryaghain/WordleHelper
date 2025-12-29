@@ -19,8 +19,8 @@ config/icon="uid://d1b0hgs7ogsvv"
 
 [display]
 
-window/size/viewport_width=713
-window/size/viewport_height=945
+window/size/viewport_width=1080
+window/size/viewport_height=1920
 window/size/always_on_top=true
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"

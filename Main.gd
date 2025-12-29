@@ -58,41 +58,41 @@ const LETTER_FREQUENCY: Dictionary[String, int] = {
 @export var label_word_list: Label
 @export_group("LineEdits")
 @export_subgroup("Word 1")
-@export var line_edit_word_1_letter_1: LineEdit
-@export var line_edit_word_1_letter_2: LineEdit
-@export var line_edit_word_1_letter_3: LineEdit
-@export var line_edit_word_1_letter_4: LineEdit
-@export var line_edit_word_1_letter_5: LineEdit
+@export var button_word_1_letter_1: Button
+@export var button_word_1_letter_2: Button
+@export var button_word_1_letter_3: Button
+@export var button_word_1_letter_4: Button
+@export var button_word_1_letter_5: Button
 @export_subgroup("Word 2")
-@export var line_edit_word_2_letter_1: LineEdit
-@export var line_edit_word_2_letter_2: LineEdit
-@export var line_edit_word_2_letter_3: LineEdit
-@export var line_edit_word_2_letter_4: LineEdit
-@export var line_edit_word_2_letter_5: LineEdit
+@export var button_word_2_letter_1: Button
+@export var button_word_2_letter_2: Button
+@export var button_word_2_letter_3: Button
+@export var button_word_2_letter_4: Button
+@export var button_word_2_letter_5: Button
 @export_subgroup("Word 3")
-@export var line_edit_word_3_letter_1: LineEdit
-@export var line_edit_word_3_letter_2: LineEdit
-@export var line_edit_word_3_letter_3: LineEdit
-@export var line_edit_word_3_letter_4: LineEdit
-@export var line_edit_word_3_letter_5: LineEdit
+@export var button_word_3_letter_1: Button
+@export var button_word_3_letter_2: Button
+@export var button_word_3_letter_3: Button
+@export var button_word_3_letter_4: Button
+@export var button_word_3_letter_5: Button
 @export_subgroup("Word 4")
-@export var line_edit_word_4_letter_1: LineEdit
-@export var line_edit_word_4_letter_2: LineEdit
-@export var line_edit_word_4_letter_3: LineEdit
-@export var line_edit_word_4_letter_4: LineEdit
-@export var line_edit_word_4_letter_5: LineEdit
+@export var button_word_4_letter_1: Button
+@export var button_word_4_letter_2: Button
+@export var button_word_4_letter_3: Button
+@export var button_word_4_letter_4: Button
+@export var button_word_4_letter_5: Button
 @export_subgroup("Word 5")
-@export var line_edit_word_5_letter_1: LineEdit
-@export var line_edit_word_5_letter_2: LineEdit
-@export var line_edit_word_5_letter_3: LineEdit
-@export var line_edit_word_5_letter_4: LineEdit
-@export var line_edit_word_5_letter_5: LineEdit
+@export var button_word_5_letter_1: Button
+@export var button_word_5_letter_2: Button
+@export var button_word_5_letter_3: Button
+@export var button_word_5_letter_4: Button
+@export var button_word_5_letter_5: Button
 @export_subgroup("Word 6")
-@export var line_edit_word_6_letter_1: LineEdit
-@export var line_edit_word_6_letter_2: LineEdit
-@export var line_edit_word_6_letter_3: LineEdit
-@export var line_edit_word_6_letter_4: LineEdit
-@export var line_edit_word_6_letter_5: LineEdit
+@export var button_word_6_letter_1: Button
+@export var button_word_6_letter_2: Button
+@export var button_word_6_letter_3: Button
+@export var button_word_6_letter_4: Button
+@export var button_word_6_letter_5: Button
 @export_group("TextureButtons")
 @export var texture_button_black: TextureButton
 @export var texture_button_grey: TextureButton
@@ -105,46 +105,46 @@ var style_box_yellow: StyleBoxFlat
 var style_box_green: StyleBoxFlat
 
 ## Column-major.
-@onready var line_edits: Dictionary[int, Dictionary] = {
+@onready var button_dict: Dictionary[int, Dictionary] = {
 	1: {
-		1: line_edit_word_1_letter_1,
-		2: line_edit_word_2_letter_1,
-		3: line_edit_word_3_letter_1,
-		4: line_edit_word_4_letter_1,
-		5: line_edit_word_5_letter_1,
-		6: line_edit_word_6_letter_1
+		1: button_word_1_letter_1,
+		2: button_word_2_letter_1,
+		3: button_word_3_letter_1,
+		4: button_word_4_letter_1,
+		5: button_word_5_letter_1,
+		6: button_word_6_letter_1
 	},
 	2: {
-		1: line_edit_word_1_letter_2,
-		2: line_edit_word_2_letter_2,
-		3: line_edit_word_3_letter_2,
-		4: line_edit_word_4_letter_2,
-		5: line_edit_word_5_letter_2,
-		6: line_edit_word_6_letter_2
+		1: button_word_1_letter_2,
+		2: button_word_2_letter_2,
+		3: button_word_3_letter_2,
+		4: button_word_4_letter_2,
+		5: button_word_5_letter_2,
+		6: button_word_6_letter_2
 	},
 	3: {
-		1: line_edit_word_1_letter_3,
-		2: line_edit_word_2_letter_3,
-		3: line_edit_word_3_letter_3,
-		4: line_edit_word_4_letter_3,
-		5: line_edit_word_5_letter_3,
-		6: line_edit_word_6_letter_3
+		1: button_word_1_letter_3,
+		2: button_word_2_letter_3,
+		3: button_word_3_letter_3,
+		4: button_word_4_letter_3,
+		5: button_word_5_letter_3,
+		6: button_word_6_letter_3
 	},
 	4: {
-		1: line_edit_word_1_letter_4,
-		2: line_edit_word_2_letter_4,
-		3: line_edit_word_3_letter_4,
-		4: line_edit_word_4_letter_4,
-		5: line_edit_word_5_letter_4,
-		6: line_edit_word_6_letter_4
+		1: button_word_1_letter_4,
+		2: button_word_2_letter_4,
+		3: button_word_3_letter_4,
+		4: button_word_4_letter_4,
+		5: button_word_5_letter_4,
+		6: button_word_6_letter_4
 	},
 	5: {
-		1: line_edit_word_1_letter_5,
-		2: line_edit_word_2_letter_5,
-		3: line_edit_word_3_letter_5,
-		4: line_edit_word_4_letter_5,
-		5: line_edit_word_5_letter_5,
-		6: line_edit_word_6_letter_5
+		1: button_word_1_letter_5,
+		2: button_word_2_letter_5,
+		3: button_word_3_letter_5,
+		4: button_word_4_letter_5,
+		5: button_word_5_letter_5,
+		6: button_word_6_letter_5
 	}
 }
 
@@ -194,45 +194,45 @@ var current_letter_colors: Dictionary[int, Dictionary] = {
 	}
 }
 
-@onready var line_edit_array: Array[LineEdit] = [
-	line_edit_word_1_letter_1,
-	line_edit_word_1_letter_2,
-	line_edit_word_1_letter_3,
-	line_edit_word_1_letter_4,
-	line_edit_word_1_letter_5,
-	line_edit_word_2_letter_1,
-	line_edit_word_2_letter_2,
-	line_edit_word_2_letter_3,
-	line_edit_word_2_letter_4,
-	line_edit_word_2_letter_5,
-	line_edit_word_3_letter_1,
-	line_edit_word_3_letter_2,
-	line_edit_word_3_letter_3,
-	line_edit_word_3_letter_4,
-	line_edit_word_3_letter_5,
-	line_edit_word_4_letter_1,
-	line_edit_word_4_letter_2,
-	line_edit_word_4_letter_3,
-	line_edit_word_4_letter_4,
-	line_edit_word_4_letter_5,
-	line_edit_word_5_letter_1,
-	line_edit_word_5_letter_2,
-	line_edit_word_5_letter_3,
-	line_edit_word_5_letter_4,
-	line_edit_word_5_letter_5,
-	line_edit_word_6_letter_1,
-	line_edit_word_6_letter_2,
-	line_edit_word_6_letter_3,
-	line_edit_word_6_letter_4,
-	line_edit_word_6_letter_5
+@onready var button_array: Array[Button] = [
+	button_word_1_letter_1,
+	button_word_1_letter_2,
+	button_word_1_letter_3,
+	button_word_1_letter_4,
+	button_word_1_letter_5,
+	button_word_2_letter_1,
+	button_word_2_letter_2,
+	button_word_2_letter_3,
+	button_word_2_letter_4,
+	button_word_2_letter_5,
+	button_word_3_letter_1,
+	button_word_3_letter_2,
+	button_word_3_letter_3,
+	button_word_3_letter_4,
+	button_word_3_letter_5,
+	button_word_4_letter_1,
+	button_word_4_letter_2,
+	button_word_4_letter_3,
+	button_word_4_letter_4,
+	button_word_4_letter_5,
+	button_word_5_letter_1,
+	button_word_5_letter_2,
+	button_word_5_letter_3,
+	button_word_5_letter_4,
+	button_word_5_letter_5,
+	button_word_6_letter_1,
+	button_word_6_letter_2,
+	button_word_6_letter_3,
+	button_word_6_letter_4,
+	button_word_6_letter_5
 ]
 
-var current_line_edit_index: int = 0
+var current_button_index: int = 0
 
 var current_word_list: String = ""
 
 func _ready() -> void:
-	style_box_default = line_edit_word_1_letter_1.get_theme_stylebox(&"normal")
+	style_box_default = button_word_1_letter_1.get_theme_stylebox(&"normal")
 
 	style_box_grey = style_box_default.duplicate(true)
 	style_box_grey.bg_color = LETTER_COLOR_GREY
@@ -245,8 +245,8 @@ func _ready() -> void:
 
 	for letter_column in LETTER_POSITIONS:
 		for word_row in WORD_POSITIONS:
-			var line_edit: LineEdit = line_edits[letter_column][word_row]
-			line_edit.add_theme_stylebox_override(&"normal", line_edit.get_theme_stylebox(&"normal").duplicate())
+			var button: Button = button_dict[letter_column][word_row]
+			button.add_theme_stylebox_override(&"normal", button.get_theme_stylebox(&"normal").duplicate())
 
 	var word_count: int = 0
 	for word: String in WORD_LIST.data:
@@ -257,19 +257,19 @@ func _ready() -> void:
 func _unhandled_key_input(event: InputEvent) -> void:
 	if event is InputEventKey and event.pressed:
 		if event.keycode == KEY_BACKSPACE:
-			current_line_edit_index = maxi(0, current_line_edit_index - 1)
-			line_edit_array[current_line_edit_index].text = ""
+			current_button_index = maxi(0, current_button_index - 1)
+			button_array[current_button_index].text = ""
 		else:
-			line_edit_array[current_line_edit_index].text = OS.get_keycode_string(event.keycode)
-			current_line_edit_index = mini(current_line_edit_index + 1, 29)
+			button_array[current_button_index].text = OS.get_keycode_string(event.keycode)
+			current_button_index = mini(current_button_index + 1, 29)
 
 func _on_button_reset_pressed() -> void:
 	current_state = STATE.PAINTING_BLACK
 	for letter_column: int in LETTER_POSITIONS:
 		for word_row: int in WORD_POSITIONS:
-			var line_edit: LineEdit = line_edits[letter_column][word_row]
-			line_edit.text = ""
-			paint_letter_color(letter_column, word_row, line_edit, false)
+			var button: Button = button_dict[letter_column][word_row]
+			button.text = ""
+			paint_letter_color(letter_column, word_row, button, false)
 	current_state = STATE.DEFAULT
 	texture_button_black.button_pressed = false
 	texture_button_grey.button_pressed = false
@@ -280,18 +280,11 @@ func _on_button_reset_pressed() -> void:
 func _on_button_quit_pressed() -> void:
 	get_tree().quit()
 
-func _on_line_edit_gui_input(event: InputEvent, word_row: int, letter_column: int) -> void:
-	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and not event.pressed:
-		var line_edit: LineEdit = line_edits[letter_column][word_row]
-		if current_state != STATE.DEFAULT:
-			line_edit.editable = false
-			line_edit.release_focus()
-			paint_letter_color(letter_column, word_row, line_edit)
-		else:
-			line_edit.editable = true
-
-func _on_line_edit_text_changed(new_text: String, source: LineEdit) -> void:
-	source.text = new_text.to_upper()
+func _on_button_word_pressed(location: Vector2i) -> void:
+	var button: Button = button_dict[location.x][location.y]
+	if current_state != STATE.DEFAULT:
+		button.release_focus()
+		paint_letter_color(location.x, location.y, button)
 
 func _on_texture_button_black_toggled(toggled_on: bool) -> void:
 	if toggled_on:
@@ -345,28 +338,28 @@ func _on_texture_button_green_toggled(toggled_on: bool) -> void:
 	else:
 		current_state = STATE.DEFAULT
 
-func paint_letter_color(letter_column: int, word_row: int, line_edit: LineEdit, do_update: bool = true) -> void:
+func paint_letter_color(letter_column: int, word_row: int, button: Button, do_update: bool = true) -> void:
 	match current_state:
 		STATE.PAINTING_BLACK:
 			current_letter_colors[letter_column][word_row] = LETTER_COLORS.EMPTY
-			line_edit.add_theme_stylebox_override(&"focus", style_box_default)
-			line_edit.add_theme_stylebox_override(&"normal", style_box_default)
-			line_edit.add_theme_stylebox_override(&"read_only", style_box_default)
+			button.add_theme_stylebox_override(&"focus", style_box_default)
+			button.add_theme_stylebox_override(&"normal", style_box_default)
+			button.add_theme_stylebox_override(&"pressed", style_box_default)
 		STATE.PAINTING_GREY:
 			current_letter_colors[letter_column][word_row] = LETTER_COLORS.GREY
-			line_edit.add_theme_stylebox_override(&"focus", style_box_grey)
-			line_edit.add_theme_stylebox_override(&"normal", style_box_grey)
-			line_edit.add_theme_stylebox_override(&"read_only", style_box_grey)
+			button.add_theme_stylebox_override(&"focus", style_box_grey)
+			button.add_theme_stylebox_override(&"normal", style_box_grey)
+			button.add_theme_stylebox_override(&"pressed", style_box_grey)
 		STATE.PAINTING_YELLOW:
 			current_letter_colors[letter_column][word_row] = LETTER_COLORS.YELLOW
-			line_edit.add_theme_stylebox_override(&"focus", style_box_yellow)
-			line_edit.add_theme_stylebox_override(&"normal", style_box_yellow)
-			line_edit.add_theme_stylebox_override(&"read_only", style_box_yellow)
+			button.add_theme_stylebox_override(&"focus", style_box_yellow)
+			button.add_theme_stylebox_override(&"normal", style_box_yellow)
+			button.add_theme_stylebox_override(&"pressed", style_box_yellow)
 		STATE.PAINTING_GREEN:
 			current_letter_colors[letter_column][word_row] = LETTER_COLORS.GREEN
-			line_edit.add_theme_stylebox_override(&"focus", style_box_green)
-			line_edit.add_theme_stylebox_override(&"normal", style_box_green)
-			line_edit.add_theme_stylebox_override(&"read_only", style_box_green)
+			button.add_theme_stylebox_override(&"focus", style_box_green)
+			button.add_theme_stylebox_override(&"normal", style_box_green)
+			button.add_theme_stylebox_override(&"pressed", style_box_green)
 
 	if do_update:
 		update_word_list()
@@ -395,7 +388,7 @@ func update_word_list() -> void:
 
 	for letter_column: int in current_letter_colors.keys():
 		for word_row: int in WORD_POSITIONS:
-			var letter: String = line_edits[letter_column][word_row].text
+			var letter: String = button_dict[letter_column][word_row].text
 			if not letter.is_empty():
 				letter = letter.to_lower()
 				match current_letter_colors[letter_column][word_row]:
