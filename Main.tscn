@@ -373,6 +373,8 @@ size_flags_vertical = 4
 toggle_mode = true
 texture_normal = ExtResource("4_20pc6")
 texture_pressed = ExtResource("5_5vvyt")
+texture_hover = ExtResource("5_5vvyt")
+texture_disabled = ExtResource("5_5vvyt")
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer/VBoxContainerPainting/HBoxContainer/TextureButtonBlack"]
 layout_mode = 1
@@ -399,6 +401,8 @@ size_flags_vertical = 4
 toggle_mode = true
 texture_normal = ExtResource("4_03owx")
 texture_pressed = ExtResource("5_03owx")
+texture_hover = ExtResource("5_03owx")
+texture_disabled = ExtResource("5_03owx")
 
 [node name="TextureButtonYellow" type="TextureButton" parent="MarginContainer/VBoxContainer/VBoxContainerPainting/HBoxContainer"]
 layout_mode = 2
@@ -407,6 +411,8 @@ size_flags_vertical = 4
 toggle_mode = true
 texture_normal = ExtResource("5_wkp8b")
 texture_pressed = ExtResource("7_wkp8b")
+texture_hover = ExtResource("7_wkp8b")
+texture_disabled = ExtResource("7_wkp8b")
 
 [node name="TextureButtonGreen" type="TextureButton" parent="MarginContainer/VBoxContainer/VBoxContainerPainting/HBoxContainer"]
 layout_mode = 2
@@ -415,6 +421,8 @@ size_flags_vertical = 4
 toggle_mode = true
 texture_normal = ExtResource("6_20pc6")
 texture_pressed = ExtResource("9_20pc6")
+texture_hover = ExtResource("9_20pc6")
+texture_disabled = ExtResource("9_20pc6")
 
 [node name="HBoxContainerControls" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2

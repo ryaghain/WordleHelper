@@ -1,11 +1,11 @@
 class_name Main extends Control
 
 enum STATE {
-	DEFAULT,
 	PAINTING_BLACK,
 	PAINTING_GREY,
 	PAINTING_YELLOW,
-	PAINTING_GREEN
+	PAINTING_GREEN,
+	NULL
 }
 
 enum LETTER_COLORS {
@@ -22,10 +22,39 @@ const LETTER_COLOR_GREEN: Color = Color("538d4eff")
 
 const BUTTON_LETTER_DEFAULT_TEXT: String = " "
 
+const VALID_KEYCODES: Array[Key] = [
+	KEY_A,
+	KEY_B,
+	KEY_C,
+	KEY_D,
+	KEY_E,
+	KEY_F,
+	KEY_G,
+	KEY_H,
+	KEY_I,
+	KEY_J,
+	KEY_K,
+	KEY_L,
+	KEY_M,
+	KEY_N,
+	KEY_O,
+	KEY_P,
+	KEY_Q,
+	KEY_R,
+	KEY_S,
+	KEY_T,
+	KEY_U,
+	KEY_V,
+	KEY_W,
+	KEY_X,
+	KEY_Y,
+	KEY_Z,
+]
+
 const WORD_LIST = preload("res://Assets/WordList.json")
 
-const GRID_WIDTH: Array[int] = [0, 1, 2, 3, 4]
-const GRID_HEIGHT: Array[int] = [0, 1, 2, 3, 4, 5]
+const GRID_WIDTH_ARRAY: Array[int] = [0, 1, 2, 3, 4]
+const GRID_HEIGHT_ARRAY: Array[int] = [0, 1, 2, 3, 4, 5]
 
 const LETTER_FREQUENCY: Dictionary[String, int] = {
 	"e": 26,
@@ -150,9 +179,8 @@ var style_box_green: StyleBoxFlat
 	}
 }
 
-var current_state: STATE = STATE.DEFAULT
+var current_state: STATE = STATE.NULL
 
-## Column-major.
 var current_letter_colors: Dictionary[int, Dictionary] = {
 	0: {
 		0: LETTER_COLORS.EMPTY,
@@ -233,11 +261,32 @@ var current_button_index: int = 0
 
 var current_word_list: String = ""
 
+var word_count: int = 0
+
+var letters_is: Dictionary[int, String] = {
+	0: "",
+	1: "",
+	2: "",
+	3: "",
+	4: ""
+}
+var letters_is_not: Dictionary[int, String] = {
+	0: "",
+	1: "",
+	2: "",
+	3: "",
+	4: ""
+}
+var word_contains: Array[String] = []
+var word_does_not_contain: Array[String] = []
+
 func _ready() -> void:
 	var has_feature: bool = DisplayServer.has_feature(DisplayServer.FEATURE_VIRTUAL_KEYBOARD)
 	print("has virtual keyboard: %s" % has_feature)
 	if has_feature:
 		button_show_keyboard.visible = true
+
+	texture_button_grey.button_pressed = true
 
 	style_box_default = button_letter_0_0.get_theme_stylebox(&"normal")
 
@@ -250,8 +299,8 @@ func _ready() -> void:
 	style_box_green = style_box_default.duplicate(true)
 	style_box_green.bg_color = LETTER_COLOR_GREEN
 
-	for letter_column in GRID_WIDTH:
-		for word_row in GRID_HEIGHT:
+	for letter_column in GRID_WIDTH_ARRAY:
+		for word_row in GRID_HEIGHT_ARRAY:
 			var button: Button = button_dict[letter_column][word_row]
 			button.add_theme_stylebox_override(&"normal", button.get_theme_stylebox(&"normal").duplicate())
 
@@ -262,32 +311,31 @@ func _unhandled_key_input(event: InputEvent) -> void:
 		if event.keycode == KEY_BACKSPACE:
 			current_button_index = maxi(0, current_button_index - 1)
 			button_array[current_button_index].text = BUTTON_LETTER_DEFAULT_TEXT
-		else:
+		elif VALID_KEYCODES.has(event.keycode):
 			button_array[current_button_index].text = OS.get_keycode_string(event.keycode)
 			current_button_index = mini(current_button_index + 1, 29)
 
 func _on_button_letter_pressed(location: Vector2i) -> void:
 	var button: Button = button_dict[location.x][location.y]
-	if current_state != STATE.DEFAULT:
-		button.release_focus()
-		if button.text != BUTTON_LETTER_DEFAULT_TEXT:
-			update_letter_color(location.x, location.y, button)
+	button.release_focus()
+	if button.text != BUTTON_LETTER_DEFAULT_TEXT:
+		update_letter_color(location.x, location.y, button)
 
 func _on_button_quit_pressed() -> void:
 	get_tree().quit()
 
 func _on_button_reset_pressed() -> void:
-	current_state = STATE.PAINTING_BLACK
-	for x: int in GRID_WIDTH:
-		for y: int in GRID_HEIGHT:
+	current_button_index = 0
+
+	texture_button_black.button_pressed = true
+	for x: int in GRID_WIDTH_ARRAY:
+		for y: int in GRID_HEIGHT_ARRAY:
 			var button: Button = button_dict[x][y]
 			button.text = BUTTON_LETTER_DEFAULT_TEXT
 			update_letter_color(x, y, button, false)
-	current_state = STATE.DEFAULT
-	texture_button_black.button_pressed = false
-	texture_button_grey.button_pressed = false
-	texture_button_yellow.button_pressed = false
-	texture_button_green.button_pressed = false
+
+	texture_button_grey.button_pressed = true
+
 	update_word_list()
 
 func _on_button_show_keyboard_pressed() -> void:
@@ -297,119 +345,131 @@ func _on_texture_button_black_toggled(toggled_on: bool) -> void:
 	if toggled_on:
 		match current_state:
 			STATE.PAINTING_GREY:
-				texture_button_grey.button_pressed = false
+				texture_button_grey.set_pressed_no_signal(false)
+				texture_button_grey.disabled = false
 			STATE.PAINTING_YELLOW:
-				texture_button_yellow.button_pressed = false
+				texture_button_yellow.set_pressed_no_signal(false)
+				texture_button_yellow.disabled = false
 			STATE.PAINTING_GREEN:
-				texture_button_green.button_pressed = false
+				texture_button_green.set_pressed_no_signal(false)
+				texture_button_green.disabled = false
+
 		current_state = STATE.PAINTING_BLACK
-	else:
-		current_state = STATE.DEFAULT
+
+		texture_button_black.disabled = true
 
 func _on_texture_button_grey_toggled(toggled_on: bool) -> void:
 	if toggled_on:
 		match current_state:
 			STATE.PAINTING_BLACK:
-				texture_button_black.button_pressed = false
+				texture_button_black.set_pressed_no_signal(false)
+				texture_button_black.disabled = false
 			STATE.PAINTING_YELLOW:
-				texture_button_yellow.button_pressed = false
+				texture_button_yellow.set_pressed_no_signal(false)
+				texture_button_yellow.disabled = false
 			STATE.PAINTING_GREEN:
-				texture_button_green.button_pressed = false
+				texture_button_green.set_pressed_no_signal(false)
+				texture_button_green.disabled = false
+
 		current_state = STATE.PAINTING_GREY
-	else:
-		current_state = STATE.DEFAULT
+
+		texture_button_grey.disabled = true
 
 func _on_texture_button_yellow_toggled(toggled_on: bool) -> void:
 	if toggled_on:
 		match current_state:
 			STATE.PAINTING_BLACK:
-				texture_button_black.button_pressed = false
+				texture_button_black.set_pressed_no_signal(false)
+				texture_button_black.disabled = false
 			STATE.PAINTING_GREY:
-				texture_button_grey.button_pressed = false
+				texture_button_grey.set_pressed_no_signal(false)
+				texture_button_grey.disabled = false
 			STATE.PAINTING_GREEN:
-				texture_button_green.button_pressed = false
+				texture_button_green.set_pressed_no_signal(false)
+				texture_button_green.disabled = false
+
 		current_state = STATE.PAINTING_YELLOW
-	else:
-		current_state = STATE.DEFAULT
+
+		texture_button_yellow.disabled = true
 
 func _on_texture_button_green_toggled(toggled_on: bool) -> void:
 	if toggled_on:
 		match current_state:
 			STATE.PAINTING_BLACK:
-				texture_button_black.button_pressed = false
+				texture_button_black.set_pressed_no_signal(false)
+				texture_button_black.disabled = false
 			STATE.PAINTING_GREY:
-				texture_button_grey.button_pressed = false
+				texture_button_grey.set_pressed_no_signal(false)
+				texture_button_grey.disabled = false
 			STATE.PAINTING_YELLOW:
-				texture_button_yellow.button_pressed = false
+				texture_button_yellow.set_pressed_no_signal(false)
+				texture_button_yellow.disabled = false
+
 		current_state = STATE.PAINTING_GREEN
-	else:
-		current_state = STATE.DEFAULT
+
+		texture_button_green.disabled = true
 
 func sort_descending(a: int, b: int) -> bool: return a > b
 
 func update_word_list() -> void:
-	var word_count: int = 0
+	current_word_list = ""
 
-	var letters_is: Dictionary[int, Dictionary] = {
-		0: {},
-		1: {},
-		2: {},
-		3: {},
-		4: {}
-	}
-	var letters_is_not: Dictionary[int, Dictionary] = {
-		0: {},
-		1: {},
-		2: {},
-		3: {},
-		4: {}
-	}
-	var word_contains: Array[String] = []
-	var word_does_not_contain: Array[String] = []
+	word_count = 0
 
-	for x: int in current_letter_colors.keys():
-		for y: int in GRID_HEIGHT:
+	letters_is = {
+		0: "",
+		1: "",
+		2: "",
+		3: "",
+		4: ""
+	}
+
+	letters_is_not = {
+		0: "",
+		1: "",
+		2: "",
+		3: "",
+		4: ""
+	}
+
+	word_contains = []
+	word_does_not_contain = []
+
+	for x: int in GRID_WIDTH_ARRAY:
+		for y: int in GRID_HEIGHT_ARRAY:
 			var letter: String = button_dict[x][y].text
-			if not letter.is_empty():
+			if letter != BUTTON_LETTER_DEFAULT_TEXT:
 				letter = letter.to_lower()
 				match current_letter_colors[x][y]:
 					LETTER_COLORS.GREY:
 						if not word_does_not_contain.has(letter):
 							word_does_not_contain.append(letter)
 					LETTER_COLORS.YELLOW:
-						letters_is_not[x][letter] = y
+						letters_is_not[x] += letter
 						if not word_contains.has(letter):
 							word_contains.append(letter)
 					LETTER_COLORS.GREEN:
-						letters_is[x][letter] = y
-
-	current_word_list = ""
+						letters_is[x] = letter
 
 	var ranked_word_strings: Dictionary[int, String] = {}
 
 	for word: String in WORD_LIST.data:
 		var is_word_valid: bool = true
 
-		for letter_position: int in GRID_WIDTH:
+		for x: int in GRID_WIDTH_ARRAY:
 			# If this position has a green letter, skip the word if the current word's letter in that position does not match.
-			if not letters_is[letter_position].is_empty() and word[letter_position] != letters_is[letter_position].keys()[0]:
+			if not letters_is[x].is_empty() and word[x] != letters_is[x]:
 				is_word_valid = false
 				break
 
 			# If this position has a yellow letter, skip the word if the current word's letter in that position matches.
-			if not letters_is_not[letter_position].is_empty():
-				for letter: String in letters_is_not[letter_position].keys():
-					if word[letter_position] == letter:
-						is_word_valid = false
-						break
+			if not letters_is_not[x].is_empty() and letters_is_not[x].contains(word[x]):
+				is_word_valid = false
+				break
 
 			if not word_contains.is_empty():
 				for letter: String in word_contains:
-					var modified_word: String = word
-					# Check if the green letter is in the same row as the yellow letter, and if so removes that letter from that position in the word.
-					if letters_is[letter_position].has(letter) and letters_is[letter_position][letter] == letters_is_not[letter_position][letter]:
-						modified_word.erase(letter_position)
-					if not modified_word.contains(letter):
+					if not word.contains(letter):
 						is_word_valid = false
 						break
 
@@ -440,9 +500,9 @@ func update_word_list() -> void:
 	for key: int in ranked_word_scores:
 		current_word_list += ranked_word_strings[key]
 
-	update_displayed_word_list(word_count)
+	update_displayed_word_list()
 
-func update_displayed_word_list(word_count: int) -> void:
+func update_displayed_word_list() -> void:
 	label_word_list.text = current_word_list.strip_edges()
 	label_word_count.text = str(word_count)
 
