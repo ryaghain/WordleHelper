@@ -20,6 +20,8 @@ const LETTER_COLOR_GREY: Color = Color("3a3a3cff")
 const LETTER_COLOR_YELLOW: Color = Color("b59f3bff")
 const LETTER_COLOR_GREEN: Color = Color("538d4eff")
 
+const BUTTON_LETTER_DEFAULT_TEXT: String = " "
+
 const WORD_LIST = preload("res://Assets/WordList.json")
 
 const GRID_WIDTH: Array[int] = [0, 1, 2, 3, 4]
@@ -56,6 +58,7 @@ const LETTER_FREQUENCY: Dictionary[String, int] = {
 
 @export var label_word_count: Label
 @export var label_word_list: Label
+@export var button_show_keyboard: Button
 @export_group("Letter Buttons")
 @export_subgroup("Word 1")
 @export var button_letter_0_0: Button
@@ -231,6 +234,11 @@ var current_button_index: int = 0
 var current_word_list: String = ""
 
 func _ready() -> void:
+	var has_feature: bool = DisplayServer.has_feature(DisplayServer.FEATURE_VIRTUAL_KEYBOARD)
+	print("has virtual keyboard: %s" % has_feature)
+	if has_feature:
+		button_show_keyboard.visible = true
+
 	style_box_default = button_letter_0_0.get_theme_stylebox(&"normal")
 
 	style_box_grey = style_box_default.duplicate(true)
@@ -247,27 +255,33 @@ func _ready() -> void:
 			var button: Button = button_dict[letter_column][word_row]
 			button.add_theme_stylebox_override(&"normal", button.get_theme_stylebox(&"normal").duplicate())
 
-	var word_count: int = 0
-	for word: String in WORD_LIST.data:
-		current_word_list += word + "\n"
-		word_count += 1
-	update_displayed_word_list(word_count)
+	update_word_list()
 
 func _unhandled_key_input(event: InputEvent) -> void:
 	if event is InputEventKey and event.pressed:
 		if event.keycode == KEY_BACKSPACE:
 			current_button_index = maxi(0, current_button_index - 1)
-			button_array[current_button_index].text = " "
+			button_array[current_button_index].text = BUTTON_LETTER_DEFAULT_TEXT
 		else:
 			button_array[current_button_index].text = OS.get_keycode_string(event.keycode)
 			current_button_index = mini(current_button_index + 1, 29)
+
+func _on_button_letter_pressed(location: Vector2i) -> void:
+	var button: Button = button_dict[location.x][location.y]
+	if current_state != STATE.DEFAULT:
+		button.release_focus()
+		if button.text != BUTTON_LETTER_DEFAULT_TEXT:
+			update_letter_color(location.x, location.y, button)
+
+func _on_button_quit_pressed() -> void:
+	get_tree().quit()
 
 func _on_button_reset_pressed() -> void:
 	current_state = STATE.PAINTING_BLACK
 	for x: int in GRID_WIDTH:
 		for y: int in GRID_HEIGHT:
 			var button: Button = button_dict[x][y]
-			button.text = " "
+			button.text = BUTTON_LETTER_DEFAULT_TEXT
 			update_letter_color(x, y, button, false)
 	current_state = STATE.DEFAULT
 	texture_button_black.button_pressed = false
@@ -276,14 +290,8 @@ func _on_button_reset_pressed() -> void:
 	texture_button_green.button_pressed = false
 	update_word_list()
 
-func _on_button_quit_pressed() -> void:
-	get_tree().quit()
-
-func _on_button_letter_pressed(location: Vector2i) -> void:
-	var button: Button = button_dict[location.x][location.y]
-	if current_state != STATE.DEFAULT:
-		button.release_focus()
-		update_letter_color(location.x, location.y, button)
+func _on_button_show_keyboard_pressed() -> void:
+	DisplayServer.virtual_keyboard_show("")
 
 func _on_texture_button_black_toggled(toggled_on: bool) -> void:
 	if toggled_on:
@@ -443,21 +451,25 @@ func update_letter_color(x: int, y: int, button: Button, do_update: bool = true)
 		STATE.PAINTING_BLACK:
 			current_letter_colors[x][y] = LETTER_COLORS.EMPTY
 			button.add_theme_stylebox_override(&"focus", style_box_default)
+			button.add_theme_stylebox_override(&"hover", style_box_default)
 			button.add_theme_stylebox_override(&"normal", style_box_default)
 			button.add_theme_stylebox_override(&"pressed", style_box_default)
 		STATE.PAINTING_GREY:
 			current_letter_colors[x][y] = LETTER_COLORS.GREY
 			button.add_theme_stylebox_override(&"focus", style_box_grey)
+			button.add_theme_stylebox_override(&"hover", style_box_grey)
 			button.add_theme_stylebox_override(&"normal", style_box_grey)
 			button.add_theme_stylebox_override(&"pressed", style_box_grey)
 		STATE.PAINTING_YELLOW:
 			current_letter_colors[x][y] = LETTER_COLORS.YELLOW
 			button.add_theme_stylebox_override(&"focus", style_box_yellow)
+			button.add_theme_stylebox_override(&"hover", style_box_yellow)
 			button.add_theme_stylebox_override(&"normal", style_box_yellow)
 			button.add_theme_stylebox_override(&"pressed", style_box_yellow)
 		STATE.PAINTING_GREEN:
 			current_letter_colors[x][y] = LETTER_COLORS.GREEN
 			button.add_theme_stylebox_override(&"focus", style_box_green)
+			button.add_theme_stylebox_override(&"hover", style_box_green)
 			button.add_theme_stylebox_override(&"normal", style_box_green)
 			button.add_theme_stylebox_override(&"pressed", style_box_green)
 

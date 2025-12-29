@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dve7my1rxi5qq"]
+[gd_scene load_steps=12 format=3 uid="uid://dve7my1rxi5qq"]
 
 [ext_resource type="Theme" uid="uid://bnswwcwcdwyju" path="res://MainTheme.tres" id="1_3dxm6"]
 [ext_resource type="Script" uid="uid://fh5qo6ewf1rd" path="res://Main.gd" id="2_lgr22"]
@@ -10,70 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://bvxekqfxds077" path="res://Assets/IconIs.png" id="6_20pc6"]
 [ext_resource type="Texture2D" uid="uid://wkj8erwwogdm" path="res://Assets/IconIsNotAndDoesContainPressed.png" id="7_wkp8b"]
 [ext_resource type="Texture2D" uid="uid://d0tbpr8fiaxej" path="res://Assets/IconIsPressed.png" id="9_20pc6"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wkp8b"]
-content_margin_left = 25.0
-content_margin_top = 25.0
-content_margin_right = 25.0
-content_margin_bottom = 25.0
-bg_color = Color(0.083392, 0.083392, 0.08339202, 1)
-border_width_left = 3
-border_width_top = 3
-border_width_right = 3
-border_width_bottom = 3
-border_color = Color(0.4326237, 0.43262374, 0.4326237, 1)
-corner_radius_top_left = 6
-corner_radius_top_right = 6
-corner_radius_bottom_right = 6
-corner_radius_bottom_left = 6
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_20pc6"]
-content_margin_left = 25.0
-content_margin_top = 25.0
-content_margin_right = 25.0
-content_margin_bottom = 25.0
-bg_color = Color(0.29219002, 0.29219005, 0.29219, 1)
-border_width_left = 3
-border_width_top = 3
-border_width_right = 3
-border_width_bottom = 3
-border_color = Color(0.4326237, 0.43262374, 0.4326237, 1)
-corner_radius_top_left = 6
-corner_radius_top_right = 6
-corner_radius_bottom_right = 6
-corner_radius_bottom_left = 6
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5vvyt"]
-content_margin_left = 25.0
-content_margin_top = 25.0
-content_margin_right = 25.0
-content_margin_bottom = 25.0
-bg_color = Color(0.083392, 0.083392, 0.08339202, 1)
-border_width_left = 3
-border_width_top = 3
-border_width_right = 3
-border_width_bottom = 3
-border_color = Color(0.4326237, 0.43262374, 0.4326237, 1)
-corner_radius_top_left = 6
-corner_radius_top_right = 6
-corner_radius_bottom_right = 6
-corner_radius_bottom_left = 6
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c6i3y"]
-content_margin_left = 25.0
-content_margin_top = 25.0
-content_margin_right = 25.0
-content_margin_bottom = 25.0
-bg_color = Color(0.29219002, 0.29219005, 0.29219, 1)
-border_width_left = 3
-border_width_top = 3
-border_width_right = 3
-border_width_bottom = 3
-border_color = Color(0.4326237, 0.43262374, 0.4326237, 1)
-corner_radius_top_left = 6
-corner_radius_top_right = 6
-corner_radius_bottom_right = 6
-corner_radius_bottom_left = 6
+[ext_resource type="Theme" uid="uid://ceh1eda0dji7j" path="res://ControlsButtonTheme.tres" id="11_20pc6"]
 
 [node name="Main" type="Control" node_paths=PackedStringArray("label_word_count", "label_word_list", "button_letter_0_0", "button_letter_1_0", "button_letter_2_0", "button_letter_3_0", "button_letter_4_0", "button_letter_0_1", "button_letter_1_1", "button_letter_2_1", "button_letter_3_1", "button_letter_4_1", "button_letter_0_2", "button_letter_1_2", "button_letter_2_2", "button_letter_3_2", "button_letter_4_2", "button_letter_0_3", "button_letter_1_3", "button_letter_2_3", "button_letter_3_3", "button_letter_4_3", "button_letter_0_4", "button_letter_1_4", "button_letter_2_4", "button_letter_3_4", "button_letter_4_4", "button_letter_0_5", "button_letter_1_5", "button_letter_2_5", "button_letter_3_5", "button_letter_4_5", "texture_button_black", "texture_button_grey", "texture_button_yellow", "texture_button_green")]
 layout_mode = 3
@@ -120,6 +57,15 @@ texture_button_black = NodePath("MarginContainer/VBoxContainer/VBoxContainerPain
 texture_button_grey = NodePath("MarginContainer/VBoxContainer/VBoxContainerPainting/HBoxContainer/TextureButtonGrey")
 texture_button_yellow = NodePath("MarginContainer/VBoxContainer/VBoxContainerPainting/HBoxContainer/TextureButtonYellow")
 texture_button_green = NodePath("MarginContainer/VBoxContainer/VBoxContainerPainting/HBoxContainer/TextureButtonGreen")
+
+[node name="ColorRectBackground" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.37413925, 0.37413928, 0.37413922, 1)
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -479,17 +425,21 @@ alignment = 1
 [node name="ButtonReset" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainerControls"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_font_sizes/font_size = 48
-theme_override_styles/normal = SubResource("StyleBoxFlat_wkp8b")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_20pc6")
+theme = ExtResource("11_20pc6")
 text = "Reset"
+
+[node name="ButtonShowKeyboard" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainerControls"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme = ExtResource("11_20pc6")
+text = "Show Keyboard"
 
 [node name="ButtonQuit" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainerControls"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_font_sizes/font_size = 48
-theme_override_styles/normal = SubResource("StyleBoxFlat_5vvyt")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_c6i3y")
+theme = ExtResource("11_20pc6")
 text = "Quit"
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer/ButtonLetter0_0" to="." method="_on_button_letter_pressed" binds= [Vector2i(0, 0)]]
@@ -527,4 +477,5 @@ text = "Quit"
 [connection signal="toggled" from="MarginContainer/VBoxContainer/VBoxContainerPainting/HBoxContainer/TextureButtonYellow" to="." method="_on_texture_button_yellow_toggled"]
 [connection signal="toggled" from="MarginContainer/VBoxContainer/VBoxContainerPainting/HBoxContainer/TextureButtonGreen" to="." method="_on_texture_button_green_toggled"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainerControls/ButtonReset" to="." method="_on_button_reset_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainerControls/ButtonShowKeyboard" to="." method="_on_button_show_keyboard_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainerControls/ButtonQuit" to="." method="_on_button_quit_pressed"]
