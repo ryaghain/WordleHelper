@@ -22,8 +22,8 @@ const LETTER_COLOR_GREEN: Color = Color("538d4eff")
 
 const WORD_LIST = preload("res://Assets/WordList.json")
 
-const LETTER_POSITIONS: Array[int] = [1, 2, 3, 4, 5]
-const WORD_POSITIONS: Array[int] = [1, 2, 3, 4, 5, 6]
+const LETTER_POSITIONS: Array[int] = [0, 1, 2, 3, 4]
+const WORD_POSITIONS: Array[int] = [0, 1, 2, 3, 4, 5]
 
 const LETTER_FREQUENCY: Dictionary[String, int] = {
 	"e": 26,
@@ -56,43 +56,43 @@ const LETTER_FREQUENCY: Dictionary[String, int] = {
 
 @export var label_word_count: Label
 @export var label_word_list: Label
-@export_group("LineEdits")
+@export_group("Letter Buttons")
 @export_subgroup("Word 1")
-@export var button_word_1_letter_1: Button
-@export var button_word_1_letter_2: Button
-@export var button_word_1_letter_3: Button
-@export var button_word_1_letter_4: Button
-@export var button_word_1_letter_5: Button
+@export var button_letter_0_0: Button
+@export var button_letter_0_1: Button
+@export var button_letter_0_2: Button
+@export var button_letter_0_3: Button
+@export var button_letter_0_4: Button
 @export_subgroup("Word 2")
-@export var button_word_2_letter_1: Button
-@export var button_word_2_letter_2: Button
-@export var button_word_2_letter_3: Button
-@export var button_word_2_letter_4: Button
-@export var button_word_2_letter_5: Button
+@export var button_letter_1_0: Button
+@export var button_letter_1_1: Button
+@export var button_letter_1_2: Button
+@export var button_letter_1_3: Button
+@export var button_letter_1_4: Button
 @export_subgroup("Word 3")
-@export var button_word_3_letter_1: Button
-@export var button_word_3_letter_2: Button
-@export var button_word_3_letter_3: Button
-@export var button_word_3_letter_4: Button
-@export var button_word_3_letter_5: Button
+@export var button_letter_2_0: Button
+@export var button_letter_2_1: Button
+@export var button_letter_2_2: Button
+@export var button_letter_2_3: Button
+@export var button_letter_2_4: Button
 @export_subgroup("Word 4")
-@export var button_word_4_letter_1: Button
-@export var button_word_4_letter_2: Button
-@export var button_word_4_letter_3: Button
-@export var button_word_4_letter_4: Button
-@export var button_word_4_letter_5: Button
+@export var button_letter_3_0: Button
+@export var button_letter_3_1: Button
+@export var button_letter_3_2: Button
+@export var button_letter_3_3: Button
+@export var button_letter_3_4: Button
 @export_subgroup("Word 5")
-@export var button_word_5_letter_1: Button
-@export var button_word_5_letter_2: Button
-@export var button_word_5_letter_3: Button
-@export var button_word_5_letter_4: Button
-@export var button_word_5_letter_5: Button
+@export var button_letter_4_0: Button
+@export var button_letter_4_1: Button
+@export var button_letter_4_2: Button
+@export var button_letter_4_3: Button
+@export var button_letter_4_4: Button
 @export_subgroup("Word 6")
-@export var button_word_6_letter_1: Button
-@export var button_word_6_letter_2: Button
-@export var button_word_6_letter_3: Button
-@export var button_word_6_letter_4: Button
-@export var button_word_6_letter_5: Button
+@export var button_letter_5_0: Button
+@export var button_letter_5_1: Button
+@export var button_letter_5_2: Button
+@export var button_letter_5_3: Button
+@export var button_letter_5_4: Button
 @export_group("TextureButtons")
 @export var texture_button_black: TextureButton
 @export var texture_button_grey: TextureButton
@@ -107,44 +107,44 @@ var style_box_green: StyleBoxFlat
 ## Column-major.
 @onready var button_dict: Dictionary[int, Dictionary] = {
 	1: {
-		1: button_word_1_letter_1,
-		2: button_word_2_letter_1,
-		3: button_word_3_letter_1,
-		4: button_word_4_letter_1,
-		5: button_word_5_letter_1,
-		6: button_word_6_letter_1
+		1: button_letter_0_0,
+		2: button_letter_1_0,
+		3: button_letter_2_0,
+		4: button_letter_3_0,
+		5: button_letter_4_0,
+		6: button_letter_5_0
 	},
 	2: {
-		1: button_word_1_letter_2,
-		2: button_word_2_letter_2,
-		3: button_word_3_letter_2,
-		4: button_word_4_letter_2,
-		5: button_word_5_letter_2,
-		6: button_word_6_letter_2
+		1: button_letter_0_1,
+		2: button_letter_1_1,
+		3: button_letter_2_1,
+		4: button_letter_3_1,
+		5: button_letter_4_1,
+		6: button_letter_5_1
 	},
 	3: {
-		1: button_word_1_letter_3,
-		2: button_word_2_letter_3,
-		3: button_word_3_letter_3,
-		4: button_word_4_letter_3,
-		5: button_word_5_letter_3,
-		6: button_word_6_letter_3
+		1: button_letter_0_2,
+		2: button_letter_1_2,
+		3: button_letter_2_2,
+		4: button_letter_3_2,
+		5: button_letter_4_2,
+		6: button_letter_5_2
 	},
 	4: {
-		1: button_word_1_letter_4,
-		2: button_word_2_letter_4,
-		3: button_word_3_letter_4,
-		4: button_word_4_letter_4,
-		5: button_word_5_letter_4,
-		6: button_word_6_letter_4
+		1: button_letter_0_3,
+		2: button_letter_1_3,
+		3: button_letter_2_3,
+		4: button_letter_3_3,
+		5: button_letter_4_3,
+		6: button_letter_5_3
 	},
 	5: {
-		1: button_word_1_letter_5,
-		2: button_word_2_letter_5,
-		3: button_word_3_letter_5,
-		4: button_word_4_letter_5,
-		5: button_word_5_letter_5,
-		6: button_word_6_letter_5
+		1: button_letter_0_4,
+		2: button_letter_1_4,
+		3: button_letter_2_4,
+		4: button_letter_3_4,
+		5: button_letter_4_4,
+		6: button_letter_5_4
 	}
 }
 
@@ -195,36 +195,36 @@ var current_letter_colors: Dictionary[int, Dictionary] = {
 }
 
 @onready var button_array: Array[Button] = [
-	button_word_1_letter_1,
-	button_word_1_letter_2,
-	button_word_1_letter_3,
-	button_word_1_letter_4,
-	button_word_1_letter_5,
-	button_word_2_letter_1,
-	button_word_2_letter_2,
-	button_word_2_letter_3,
-	button_word_2_letter_4,
-	button_word_2_letter_5,
-	button_word_3_letter_1,
-	button_word_3_letter_2,
-	button_word_3_letter_3,
-	button_word_3_letter_4,
-	button_word_3_letter_5,
-	button_word_4_letter_1,
-	button_word_4_letter_2,
-	button_word_4_letter_3,
-	button_word_4_letter_4,
-	button_word_4_letter_5,
-	button_word_5_letter_1,
-	button_word_5_letter_2,
-	button_word_5_letter_3,
-	button_word_5_letter_4,
-	button_word_5_letter_5,
-	button_word_6_letter_1,
-	button_word_6_letter_2,
-	button_word_6_letter_3,
-	button_word_6_letter_4,
-	button_word_6_letter_5
+	button_letter_0_0,
+	button_letter_0_1,
+	button_letter_0_2,
+	button_letter_0_3,
+	button_letter_0_4,
+	button_letter_1_0,
+	button_letter_1_1,
+	button_letter_1_2,
+	button_letter_1_3,
+	button_letter_1_4,
+	button_letter_2_0,
+	button_letter_2_1,
+	button_letter_2_2,
+	button_letter_2_3,
+	button_letter_2_4,
+	button_letter_3_0,
+	button_letter_3_1,
+	button_letter_3_2,
+	button_letter_3_3,
+	button_letter_3_4,
+	button_letter_4_0,
+	button_letter_4_1,
+	button_letter_4_2,
+	button_letter_4_3,
+	button_letter_4_4,
+	button_letter_5_0,
+	button_letter_5_1,
+	button_letter_5_2,
+	button_letter_5_3,
+	button_letter_5_4
 ]
 
 var current_button_index: int = 0
@@ -232,7 +232,7 @@ var current_button_index: int = 0
 var current_word_list: String = ""
 
 func _ready() -> void:
-	style_box_default = button_word_1_letter_1.get_theme_stylebox(&"normal")
+	style_box_default = button_letter_0_0.get_theme_stylebox(&"normal")
 
 	style_box_grey = style_box_default.duplicate(true)
 	style_box_grey.bg_color = LETTER_COLOR_GREY
