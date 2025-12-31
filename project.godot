@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="Wordle Helper"
+config/version="1.2.0.0"
 run/main_scene="uid://dve7my1rxi5qq"
 config/features=PackedStringArray("4.5", "Forward Plus")
 boot_splash/bg_color=Color(0.37254903, 0.37254903, 0.37254903, 1)
