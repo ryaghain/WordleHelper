@@ -51,7 +51,7 @@ const VALID_KEYCODES: Array[Key] = [
 	KEY_Z,
 ]
 
-const WORD_LIST: JSON = preload("res://Assets/WordList.json")
+const WORD_LIST: JSON = preload("res://Assets/FilteredData.json")
 
 const GRID_WIDTH_ARRAY: Array[int] = [0, 1, 2, 3, 4]
 const GRID_HEIGHT_ARRAY: Array[int] = [0, 1, 2, 3, 4, 5]
@@ -259,7 +259,11 @@ var current_letter_colors: Dictionary[int, Dictionary] = {
 
 var current_button_index: int = 0
 
-var current_word_list: String = ""
+var sort_by_letter: bool = false
+
+var current_word_list_array: Array[String] = []
+
+var current_word_list_string: String = ""
 
 var word_count: int = 0
 
@@ -341,6 +345,10 @@ func _on_button_reset_pressed() -> void:
 func _on_button_show_keyboard_pressed() -> void:
 	DisplayServer.virtual_keyboard_show("")
 
+func _on_option_button_sort_method_item_selected(value: int) -> void:
+	sort_by_letter = bool(value)
+	sort_word_list()
+
 func _on_texture_button_black_toggled(toggled_on: bool) -> void:
 	if toggled_on:
 		match current_state:
@@ -409,32 +417,7 @@ func _on_texture_button_green_toggled(toggled_on: bool) -> void:
 
 		texture_button_green.disabled = true
 
-func sort_descending(a: int, b: int) -> bool: return a > b
-
-func update_word_list() -> void:
-	current_word_list = ""
-
-	word_count = 0
-
-	letters_is = {
-		0: "",
-		1: "",
-		2: "",
-		3: "",
-		4: ""
-	}
-
-	letters_is_not = {
-		0: "",
-		1: "",
-		2: "",
-		3: "",
-		4: ""
-	}
-
-	word_contains = []
-	word_does_not_contain = []
-
+func get_valid_words() -> void:
 	for x: int in GRID_WIDTH_ARRAY:
 		for y: int in GRID_HEIGHT_ARRAY:
 			var letter: String = button_dict[x][y].text
@@ -451,9 +434,7 @@ func update_word_list() -> void:
 					LETTER_COLORS.GREEN:
 						letters_is[x] = letter
 
-	var ranked_word_strings: Dictionary[int, String] = {}
-
-	for word: String in WORD_LIST.data:
+	for word: String in WORD_LIST.data.keys():
 		var is_word_valid: bool = true
 
 		for x: int in GRID_WIDTH_ARRAY:
@@ -480,30 +461,68 @@ func update_word_list() -> void:
 						break
 
 		if is_word_valid:
-			var word_score: int = 0
-			var word_score_tracker: Array[String] = []
-
-			for letter: String in word:
-				if not word_score_tracker.has(letter):
-					word_score_tracker.append(letter)
-					word_score += LETTER_FREQUENCY[letter]
-
-			if ranked_word_strings.has(word_score):
-				ranked_word_strings[word_score] += word + "\n"
-			else:
-				ranked_word_strings[word_score] = word + "\n"
-
+			current_word_list_array.append(word)
 			word_count += 1
 
-	var ranked_word_scores: Array[int] = ranked_word_strings.keys()
+func sort_descending(a: int, b: int) -> bool: return a > b
+
+func sort_word_list() -> void:
+	current_word_list_string = ""
+	var ranked_words_dict: Dictionary[int, String] = {}
+
+	for word: String in current_word_list_array:
+		var word_score: int = 0
+
+		if sort_by_letter:
+			var word_letter_score_tracker: Array[String] = []
+			for letter: String in word:
+				if not word_letter_score_tracker.has(letter):
+					word_letter_score_tracker.append(letter)
+					word_score += LETTER_FREQUENCY[letter]
+		else:
+			word_score = int(WORD_LIST.data[word])
+
+		if ranked_words_dict.has(word_score):
+			ranked_words_dict[word_score] += word + "\n"
+		else:
+			ranked_words_dict[word_score] = word + "\n"
+
+	var ranked_word_scores: Array[int] = ranked_words_dict.keys()
 	ranked_word_scores.sort_custom(sort_descending)
 	for key: int in ranked_word_scores:
-		current_word_list += ranked_word_strings[key]
+		current_word_list_string += ranked_words_dict[key]
 
 	update_displayed_word_list()
 
+func update_word_list() -> void:
+	current_word_list_array = []
+
+	word_count = 0
+
+	letters_is = {
+		0: "",
+		1: "",
+		2: "",
+		3: "",
+		4: ""
+	}
+
+	letters_is_not = {
+		0: "",
+		1: "",
+		2: "",
+		3: "",
+		4: ""
+	}
+
+	word_contains = []
+	word_does_not_contain = []
+
+	get_valid_words()
+	sort_word_list()
+
 func update_displayed_word_list() -> void:
-	label_word_list.text = current_word_list.strip_edges()
+	label_word_list.text = current_word_list_string.strip_edges()
 	label_word_count.text = str(word_count)
 
 func update_letter_color(x: int, y: int, button: Button, do_update: bool = true) -> void:

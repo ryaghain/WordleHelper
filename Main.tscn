@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dve7my1rxi5qq"]
+[gd_scene load_steps=13 format=3 uid="uid://dve7my1rxi5qq"]
 
 [ext_resource type="Theme" uid="uid://bnswwcwcdwyju" path="res://MainTheme.tres" id="1_3dxm6"]
 [ext_resource type="Script" uid="uid://fh5qo6ewf1rd" path="res://Main.gd" id="2_lgr22"]
@@ -12,7 +12,14 @@
 [ext_resource type="Texture2D" uid="uid://d0tbpr8fiaxej" path="res://Assets/IconIsPressed.png" id="9_20pc6"]
 [ext_resource type="Theme" uid="uid://ceh1eda0dji7j" path="res://ControlsButtonTheme.tres" id="11_20pc6"]
 
-[node name="Main" type="Control" node_paths=PackedStringArray("label_word_count", "label_word_list", "button_letter_0_0", "button_letter_1_0", "button_letter_2_0", "button_letter_3_0", "button_letter_4_0", "button_letter_0_1", "button_letter_1_1", "button_letter_2_1", "button_letter_3_1", "button_letter_4_1", "button_letter_0_2", "button_letter_1_2", "button_letter_2_2", "button_letter_3_2", "button_letter_4_2", "button_letter_0_3", "button_letter_1_3", "button_letter_2_3", "button_letter_3_3", "button_letter_4_3", "button_letter_0_4", "button_letter_1_4", "button_letter_2_4", "button_letter_3_4", "button_letter_4_4", "button_letter_0_5", "button_letter_1_5", "button_letter_2_5", "button_letter_3_5", "button_letter_4_5", "texture_button_black", "texture_button_grey", "texture_button_yellow", "texture_button_green")]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_20pc6"]
+bg_color = Color(0.5689727, 0.56897277, 0.56897265, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[node name="Main" type="Control" node_paths=PackedStringArray("label_word_count", "label_word_list", "button_show_keyboard", "button_letter_0_0", "button_letter_1_0", "button_letter_2_0", "button_letter_3_0", "button_letter_4_0", "button_letter_0_1", "button_letter_1_1", "button_letter_2_1", "button_letter_3_1", "button_letter_4_1", "button_letter_0_2", "button_letter_1_2", "button_letter_2_2", "button_letter_3_2", "button_letter_4_2", "button_letter_0_3", "button_letter_1_3", "button_letter_2_3", "button_letter_3_3", "button_letter_4_3", "button_letter_0_4", "button_letter_1_4", "button_letter_2_4", "button_letter_3_4", "button_letter_4_4", "button_letter_0_5", "button_letter_1_5", "button_letter_2_5", "button_letter_3_5", "button_letter_4_5", "texture_button_black", "texture_button_grey", "texture_button_yellow", "texture_button_green")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -21,8 +28,9 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_3dxm6")
 script = ExtResource("2_lgr22")
-label_word_count = NodePath("MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/VBoxContainerWordList/VBoxContainerResults/LabelCount")
+label_word_count = NodePath("MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/VBoxContainerWordList/VBoxContainerResults/PanelContainerResults/MarginContainer/VBoxContainer/LabelCount")
 label_word_list = NodePath("MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/VBoxContainerWordList/PanelContainer/MarginContainer/ScrollContainer/Label")
+button_show_keyboard = NodePath("MarginContainer/VBoxContainer/HBoxContainerControls/ButtonShowKeyboard")
 button_letter_0_0 = NodePath("MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer/ButtonLetter0_0")
 button_letter_1_0 = NodePath("MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer/ButtonLetter1_0")
 button_letter_2_0 = NodePath("MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer/ButtonLetter2_0")
@@ -308,25 +316,70 @@ text = " "
 
 [node name="VBoxContainerWordList" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
 
 [node name="VBoxContainerResults" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/VBoxContainerWordList"]
 layout_mode = 2
-theme_override_constants/separation = 0
 
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/VBoxContainerWordList/VBoxContainerResults"]
+[node name="PanelContainerResults" type="PanelContainer" parent="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/VBoxContainerWordList/VBoxContainerResults"]
 layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_20pc6")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/VBoxContainerWordList/VBoxContainerResults/PanelContainerResults"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 15
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/VBoxContainerWordList/VBoxContainerResults/PanelContainerResults/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/VBoxContainerWordList/VBoxContainerResults/PanelContainerResults/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
 text = "Results"
 horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
-[node name="LabelCount" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/VBoxContainerWordList/VBoxContainerResults"]
+[node name="LabelCount" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/VBoxContainerWordList/VBoxContainerResults/PanelContainerResults/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 text = "0"
 horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
+
+[node name="PanelContainerOrderMethod" type="PanelContainer" parent="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/VBoxContainerWordList/VBoxContainerResults"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_20pc6")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/VBoxContainerWordList/VBoxContainerResults/PanelContainerOrderMethod"]
+layout_mode = 2
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 15
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/VBoxContainerWordList/VBoxContainerResults/PanelContainerOrderMethod/MarginContainer"]
+layout_mode = 2
+
+[node name="LabelOrderMethod" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/VBoxContainerWordList/VBoxContainerResults/PanelContainerOrderMethod/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Order"
+horizontal_alignment = 1
+
+[node name="OptionButtonSortMethod" type="OptionButton" parent="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/VBoxContainerWordList/VBoxContainerResults/PanelContainerOrderMethod/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+alignment = 1
+selected = 0
+item_count = 2
+popup/item_0/text = "Word"
+popup/item_0/id = 0
+popup/item_1/text = "Letter"
+popup/item_1/id = 1
 
 [node name="PanelContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/VBoxContainerWordList"]
 custom_minimum_size = Vector2(0, 570)
@@ -349,6 +402,7 @@ horizontal_scroll_mode = 0
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme_override_font_sizes/font_size = 48
 uppercase = true
 
 [node name="VBoxContainerPainting" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
@@ -482,6 +536,7 @@ text = "Quit"
 [connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer/ButtonLetter2_5" to="." method="_on_button_letter_pressed" binds= [Vector2i(2, 5)]]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer/ButtonLetter3_5" to="." method="_on_button_letter_pressed" binds= [Vector2i(3, 5)]]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/GridContainer/ButtonLetter4_5" to="." method="_on_button_letter_pressed" binds= [Vector2i(4, 5)]]
+[connection signal="item_selected" from="MarginContainer/VBoxContainer/HBoxContainerTop/HBoxContainer/VBoxContainerWordList/VBoxContainerResults/PanelContainerOrderMethod/MarginContainer/VBoxContainer/OptionButtonSortMethod" to="." method="_on_option_button_sort_method_item_selected"]
 [connection signal="toggled" from="MarginContainer/VBoxContainer/VBoxContainerPainting/HBoxContainer/TextureButtonBlack" to="." method="_on_texture_button_black_toggled"]
 [connection signal="toggled" from="MarginContainer/VBoxContainer/VBoxContainerPainting/HBoxContainer/TextureButtonGrey" to="." method="_on_texture_button_grey_toggled"]
 [connection signal="toggled" from="MarginContainer/VBoxContainer/VBoxContainerPainting/HBoxContainer/TextureButtonYellow" to="." method="_on_texture_button_yellow_toggled"]
