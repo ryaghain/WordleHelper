@@ -51,7 +51,7 @@ const VALID_KEYCODES: Array[Key] = [
 	KEY_Z,
 ]
 
-const WORD_LIST = preload("res://Assets/WordList.json")
+const WORD_LIST: JSON = preload("res://Assets/WordList.json")
 
 const GRID_WIDTH_ARRAY: Array[int] = [0, 1, 2, 3, 4]
 const GRID_HEIGHT_ARRAY: Array[int] = [0, 1, 2, 3, 4, 5]

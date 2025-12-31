@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://dpkfhhgcwqyhf"]
+
+[ext_resource type="Script" uid="uid://di41fujpeaj7u" path="res://DataProcessing/DataProcessing.gd" id="1_sb03n"]
+[ext_resource type="JSON" path="res://Assets/WordList.json" id="2_dj3y2"]
+
+[node name="DataProcessing" type="Node"]
+script = ExtResource("1_sb03n")
+word_list = ExtResource("2_dj3y2")
+raw_data_file_path = "res://Assets/eng_news_2024_1M-words.txt"
+raw_data_string = ""
+data = Dictionary[String, int]({})
+filtered_data = Dictionary[String, int]({})
