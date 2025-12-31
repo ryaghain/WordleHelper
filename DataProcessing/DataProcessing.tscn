@@ -6,7 +6,4 @@
 [node name="DataProcessing" type="Node"]
 script = ExtResource("1_sb03n")
 word_list = ExtResource("2_dj3y2")
-raw_data_file_path = "res://Assets/eng_news_2024_1M-words.txt"
-raw_data_string = ""
-data = Dictionary[String, int]({})
-filtered_data = Dictionary[String, int]({})
+raw_data_folder_path = "C:/Users/ryan/Documents/WordFrequencyData/Extracted"
