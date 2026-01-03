@@ -1,12 +1,17 @@
 @tool
 extends Node
 
+const FILTERED_DATA_FILE = preload("res://Assets/FilteredData.json")
+
 @export var word_list: JSON
 @export var raw_data_folder_path: String = ""
 @export_tool_button("Process Raw Data") var process_raw_data = _process_raw_data
 @export_tool_button("Convert String To Dict") var convert_string_to_dict = _convert_string_to_dict
 @export_tool_button("Filter Data") var filter_data = _filter_data
 @export_tool_button("Run") var run = _run
+@export_group("Single Word")
+@export var single_word: String
+@export_tool_button("Run Single Word") var run_single_word = _run_single_word
 
 var raw_data_strings: Array[String] = []
 var unfiltered_data: Dictionary[String, Array] = {}
@@ -22,6 +27,12 @@ func _run() -> void:
 	_process_raw_data()
 	_convert_string_to_dict()
 	_filter_data()
+
+func _run_single_word() -> void:
+	if not single_word.is_empty():
+		_process_raw_data()
+		_convert_string_to_dict()
+		_get_single_word_data()
 
 func _process_raw_data() -> void:
 	for file_path: String in DirAccess.get_files_at(raw_data_folder_path):
@@ -70,3 +81,22 @@ func _filter_data() -> void:
 	file.close()
 
 	print("Saved data to 'res://Assets/FilteredData.json'.")
+
+func _get_single_word_data() -> void:
+	if unfiltered_data.has(single_word):
+		var average_frequency: int = 0
+		var frequencies: Array = unfiltered_data[single_word]
+
+		for n: int in frequencies:
+			average_frequency += n
+		average_frequency = roundi(float(average_frequency) / float(frequencies.size()))
+
+		print("%s: %s" % [single_word, average_frequency])
+
+		var existing_data: Dictionary = FILTERED_DATA_FILE.data
+		existing_data[single_word] = average_frequency
+		var file: FileAccess = FileAccess.open("res://Assets/FilteredData.json", FileAccess.WRITE)
+		print("Opening FilteredData.json: %s" % error_string(FileAccess.get_open_error()))
+		file.store_line(JSON.stringify(existing_data, "\t"))
+		file.flush()
+		file.close()
