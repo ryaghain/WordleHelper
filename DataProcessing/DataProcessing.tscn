@@ -6,3 +6,4 @@
 [node name="DataProcessing" type="Node"]
 script = ExtResource("1_sb03n")
 word_list = ExtResource("2_dj3y2")
+raw_data_folder_path = "res://Assets/WordFrequencyData/"
