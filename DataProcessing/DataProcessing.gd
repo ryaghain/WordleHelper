@@ -15,7 +15,7 @@ const FILTERED_DATA_FILE = preload("res://Assets/FilteredData.json")
 
 var raw_data_strings: Array[String] = []
 var unfiltered_data: Dictionary[String, Array] = {}
-var filtered_data: Dictionary[String, int] = {}
+var filtered_data: Dictionary[String, float] = {}
 
 func _ready() -> void:
 	if not Engine.is_editor_hint():
@@ -63,12 +63,12 @@ func _convert_string_to_dict() -> void:
 func _filter_data() -> void:
 	for word: String in unfiltered_data.keys():
 		if word_list.data.has(word):
-			var average_frequency: int = 0
+			var average_frequency: float = 0.0
 			var frequencies: Array = unfiltered_data[word]
 
 			for n: int in frequencies:
 				average_frequency += n
-			average_frequency = roundi(float(average_frequency) / float(frequencies.size()))
+			average_frequency = roundf(average_frequency / float(frequencies.size()))
 
 			filtered_data[word] = average_frequency
 			print("%s: %s" % [word, average_frequency])
@@ -84,12 +84,12 @@ func _filter_data() -> void:
 
 func _get_single_word_data() -> void:
 	if unfiltered_data.has(single_word):
-		var average_frequency: int = 0
+		var average_frequency: float = 0.0
 		var frequencies: Array = unfiltered_data[single_word]
 
 		for n: int in frequencies:
 			average_frequency += n
-		average_frequency = roundi(float(average_frequency) / float(frequencies.size()))
+		average_frequency = roundf(average_frequency / float(frequencies.size()))
 
 		print("%s: %s" % [single_word, average_frequency])
 
